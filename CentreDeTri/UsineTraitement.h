@@ -7,6 +7,6 @@ public:
 	UsineTraitement();
 	~UsineTraitement();
 
-	void traiterDechet()
+	void traiterDechet(Dechet dechet);
 };
 

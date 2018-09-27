@@ -19,7 +19,7 @@ private:
 	int type;
 	string description;
 	string couleur;
-	materiel m;
+	materiel mat;
 	bool estEnStyromousse;
 	bool estRigide;
 
@@ -34,6 +34,7 @@ public:
 	int getType() const { return type; };
 	string getDescription() const { return description; };
 	string getCouleur() const { return couleur; };
+	materiel getMateriel() const { return mat; };
 	bool getEstEnStyromousse() const { return estEnStyromousse; };
 	bool getEstRigide() const { return estRigide; };
 
@@ -43,7 +44,7 @@ private:
 	void setType(int _type) { if (_type <= 7 && _type >= 1) { type = _type; } else { type = 0; }; };
 	void setDescription(string _description) { if (size(_description) < 3) { description = string("???"); } else { description = _description; } };
 	void setCouleur(string _couleur) { couleur = _couleur; };
-	void setMateriel(materiel _materiel) { m = _materiel; };
+	void setMateriel(materiel _materiel) { mat = _materiel; };
 	void setEstEnStyromousse(bool _estEnStyromousse) { estEnStyromousse = _estEnStyromousse; };
 	void setEstRigide(bool _estRigide) { estRigide = _estRigide; };
 };
