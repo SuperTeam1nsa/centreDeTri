@@ -5,7 +5,7 @@ class UQAC
 public:
 	UQAC();
 	~UQAC();
-
+	//test de git
 	static ChargementDechet* getChargementDechet();
 };
 
