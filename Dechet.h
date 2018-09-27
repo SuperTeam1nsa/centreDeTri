@@ -13,7 +13,7 @@ public:
 	};
 
 private:
-	int poids;
+	int poids; 
 	static int id;
 	int purete;
 	int type;
