@@ -2,7 +2,7 @@
 
 Dechet::Dechet(int poids, int purete, int type, string description, string couleur, materiel materiel, bool estEnStyromousse, bool estRigide)
 {
-	setPoids(poids);
+	setPoids(poids); //test
 	id++;
 	setPurete(purete);
 	setType(type);
