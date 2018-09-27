@@ -8,3 +8,4 @@ CentreDeTri.sln
 CentreDeTri/CentreDeTri.vcxproj
 CentreDeTri/CentreDeTri.vcxproj.filters
 CentreDeTri/CentreDeTri.vcxproj.user
+*.ipch
