@@ -1,4 +1,5 @@
 #include "Camion.h"
+#include <stdexcept>
 
 Camion::Camion(int capacite) :maxCapacite(capacite), capacite(0)
 {
@@ -15,5 +16,5 @@ void Camion::ajouterDechet(DechetTraite d)
 	{
 		pile_dechets.push(d);
 	}
-	throw CAMION_PLEIN;
+	throw "CAMION_PLEIN";
 }
