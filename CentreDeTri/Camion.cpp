@@ -16,5 +16,6 @@ void Camion::ajouterDechet(DechetTraite d)
 	{
 		pile_dechets.push(d);
 	}
-	throw "CAMION_PLEIN";
+	else
+		throw "CAMION_PLEIN";
 }
