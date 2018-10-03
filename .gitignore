@@ -11,3 +11,12 @@ CentreDeTri/CentreDeTri.vcxproj.user
 *.ipch
 /fichiersDeProjet/.vs/fichiersDeProjet/v15
 /fichiersDeProjet
+/CentreDeTri/.vs/CentreDeTri/v15
+/CentreDeTri/pch.h
+/CentreDeTri/pch.cpp
+/CentreDeTri/CentreDeTri.cpp
+/CentreDeTri/CamionBleu.cpp
+/CentreDeTri/Debug/CentreDeTri.log
+/CentreDeTri/Debug/CentreDeTri.tlog/CL.command.1.tlog
+/CentreDeTri/Debug/CentreDeTri.tlog/unsuccessfulbuild
+/CentreDeTri/Debug/CentreDeTri.tlog/CentreDeTri.lastbuildstate
