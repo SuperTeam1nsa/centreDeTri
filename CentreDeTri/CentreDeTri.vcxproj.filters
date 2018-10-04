@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Déchets">
+      <UniqueIdentifier>{7e38ae68-d19d-4444-b7fe-f0adf6740d5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UsineTraitement.cpp">
@@ -42,34 +45,34 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\BoitecCarton.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\BouteilleBiere.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\Chaise.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\DechetMalConcu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\FeuillePapier.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\PlanteVerte.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\QuelqueChose.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\RestantNourriture.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\SacChips.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\VerreCafe.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
