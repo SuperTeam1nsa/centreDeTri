@@ -30,6 +30,9 @@
     <ClCompile Include="UQAC.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Camion.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UsineTraitement.h">
@@ -73,6 +76,18 @@
     </ClInclude>
     <ClInclude Include="Dechets\VerreCafe.h">
       <Filter>Fichiers d%27en-tête\Déchets</Filter>
+    </ClInclude>
+    <ClInclude Include="Camion.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CamionBleu.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CamionBrun.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CamionVert.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
