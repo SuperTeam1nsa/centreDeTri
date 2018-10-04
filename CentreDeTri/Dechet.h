@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -9,42 +10,48 @@ class Dechet
 public:
 	enum materiel
 	{
-		carton, bouteille, plastique, metal, vegetal, bois, nourriture, papier, styromousse, inconnu
+		CARTON, BOUTEILLE, PLASTIQUE, METAL, VEGETAL, BOIS, NOURRITURE, PAPIER, STYROFOAM, INCONNU
 	};
 
 private:
 	int poids; 
 	static int id;
-	int purete;
-	int type;
 	string description;
+	int type;
 	string couleur;
 	materiel mat;
-	bool estEnStyromousse;
-	bool estRigide;
+	int purete;
+	bool styromousse;
+	bool rigide;
+	static int idCourant;
 
-public:
-	Dechet(int poids, int purete, int type, string description, string couleur, materiel materiel, bool estEnStyromousse, bool estRigide);
+protected:
+	Dechet(int poids, string description, int type, string couleur, materiel materiel, int purete, bool estEnStyromousse, bool estRigide);
 	Dechet(int poids, string description);
 	~Dechet();
 
+public:
+	Dechet();
 	int getPoids() const { return poids; };
 	int getId() const { return id; };
-	int getPurete() const { return purete; };
-	int getType() const { return type; };
 	string getDescription() const { return description; };
+	int getType() const { return type; };
 	string getCouleur() const { return couleur; };
 	materiel getMateriel() const { return mat; };
-	bool getEstEnStyromousse() const { return estEnStyromousse; };
-	bool getEstRigide() const { return estRigide; };
+	int getPurete() const { return purete; };
+	bool getEstEnStyromousse() const { return styromousse; };
+	bool getEstRigide() const { return rigide; };
 
 private:
 	void setPoids(int _poids) { poids = max(min(_poids, 100), 0); };
+	void setId() { id = idCourant; idCourant++; };
 	void setPurete(int _purete) { purete = max(min(_purete, 100), 0); };
 	void setType(int _type) { if (_type <= 7 && _type >= 1) { type = _type; } else { type = 0; }; };
 	void setDescription(string _description) { if (size(_description) < 3) { description = string("???"); } else { description = _description; } };
 	void setCouleur(string _couleur) { couleur = _couleur; };
 	void setMateriel(materiel _materiel) { mat = _materiel; };
-	void setEstEnStyromousse(bool _estEnStyromousse) { estEnStyromousse = _estEnStyromousse; };
-	void setEstRigide(bool _estRigide) { estRigide = _estRigide; };
+	void setEstEnStyromousse(bool _estEnStyromousse) { styromousse = _estEnStyromousse; };
+	void setEstRigide(bool _estRigide) { rigide = _estRigide; };
 };
+
+ostream& operator<<(ostream &out, Dechet const &dechet);
