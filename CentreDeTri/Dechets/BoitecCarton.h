@@ -1,5 +1,5 @@
 #pragma once
-#include "Dechet.h"
+#include "../Dechet.h"
 class BoitecCarton :
 	public Dechet
 {
