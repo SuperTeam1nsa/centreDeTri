@@ -123,6 +123,16 @@
   <ItemGroup>
     <ClInclude Include="ChargementDechet.h" />
     <ClInclude Include="Dechet.h" />
+    <ClInclude Include="Dechets\BoitecCarton.h" />
+    <ClInclude Include="Dechets\BouteilleBiere.h" />
+    <ClInclude Include="Dechets\Chaise.h" />
+    <ClInclude Include="Dechets\DechetMalConcu.h" />
+    <ClInclude Include="Dechets\FeuillePapier.h" />
+    <ClInclude Include="Dechets\PlanteVerte.h" />
+    <ClInclude Include="Dechets\QuelqueChose.h" />
+    <ClInclude Include="Dechets\RestantNourriture.h" />
+    <ClInclude Include="Dechets\SacChips.h" />
+    <ClInclude Include="Dechets\VerreCafe.h" />
     <ClInclude Include="UQAC.h" />
     <ClInclude Include="UsineTraitement.h" />
   </ItemGroup>
