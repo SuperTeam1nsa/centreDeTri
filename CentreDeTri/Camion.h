@@ -3,14 +3,16 @@
 class Camion
 {
 public:
-	Camion(int capacite);
+	Camion(int maxCapacite);
 	~Camion();
-	void ajouterDechet(const DechetTraite &d);//sert pour les sous camions à get D.T_recyclable etc sans redéfinition via polymorphisme
+	bool ajouterDechet(DechetTraite *d);
+	int viderCamion();
+	//Rq: on aurait pu s'éviter les camions bleus verts etc via le polymorphisme des déchets 
 	//=> ou bien en virtual et redéfinir les fonctions ajouterDechet avec les sous types de DechetTraite
 
 protected:
 	int maxCapacite;
 	int capacite;
-	std::stack<DechetTraite> pile_dechets;
+	std::stack<DechetTraite*> pile_dechets;
 
 };
