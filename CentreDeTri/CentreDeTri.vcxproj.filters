@@ -141,7 +141,10 @@
       <Filter>Fichiers d%27en-tête\Camions</Filter>
     </ClInclude>
     <ClInclude Include="GenerateurSequenceOperation.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\GenerateurOperation</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceOperations.h">
+      <Filter>Fichiers d%27en-tête\GenerateurOperation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

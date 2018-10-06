@@ -153,6 +153,7 @@
     <ClInclude Include="Operation5.h" />
     <ClInclude Include="Operation6.h" />
     <ClInclude Include="OperationTraitement.h" />
+    <ClInclude Include="SequenceOperations.h" />
     <ClInclude Include="UQAC.h" />
     <ClInclude Include="UsineTraitement.h" />
   </ItemGroup>
