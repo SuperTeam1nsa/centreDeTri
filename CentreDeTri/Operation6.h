@@ -5,7 +5,7 @@ class Operation6 :
 {
 public:
 	Operation6(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) :Operation(operationSuivanteTrue, operationSuivanteFalse) {};
-	~Operation6() {};
+	virtual ~Operation6() {};
 	bool effectuerOperation(Dechet* dechet) override {
 		return (dechet->getMateriel() == Dechet::PLASTIQUE &&
 			(dechet->getType() == 0 || dechet->getType() == 6));

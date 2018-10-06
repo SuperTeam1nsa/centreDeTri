@@ -9,7 +9,7 @@ public:
 	};
 	virtual bool effectuerOperation(Dechet* dechet);//fonction virtuelle pure
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
-	~Operation();
+	virtual ~Operation();
 
 protected:
 	Operation();

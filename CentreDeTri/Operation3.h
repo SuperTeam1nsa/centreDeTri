@@ -5,6 +5,6 @@ class Operation3 :
 {
 public:
 	Operation3(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) :Operation(operationSuivanteTrue, operationSuivanteFalse) {};
-	~Operation3() {};
+	virtual ~Operation3() {};
 	bool effectuerOperation(Dechet* dechet) override { return (dechet->getMateriel() == Dechet::PAPIER | dechet->getMateriel() == Dechet::CARTON); }
 };
