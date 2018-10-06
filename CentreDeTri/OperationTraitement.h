@@ -6,9 +6,8 @@ class OperationTraitement :
 {
 	friend class UsineTraitement;
 public:
-	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; };
-	OperationTraitement() :Operation() {};
-	virtual ~OperationTraitement() { delete usineTraitement; };
+	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; }; s
+		virtual ~OperationTraitement() { delete usineTraitement; };
 
 	bool effectuerOperation(Dechet* dechet) override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
 protected:

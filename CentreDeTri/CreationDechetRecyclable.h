@@ -5,7 +5,6 @@ class CreationDechetRecyclable :
 {
 public:
 	CreationDechetRecyclable(UsineTraitement* usineTraitement) : OperationTraitement(usineTraitement) {};
-	CreationDechetRecyclable() {};
 	bool effectuerOperation(Dechet* dechet) override { creerDechetTraiteRecyclable(dechet); return true; }
 	virtual ~CreationDechetRecyclable() {};
 };
