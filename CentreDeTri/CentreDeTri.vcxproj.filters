@@ -122,5 +122,17 @@
     <ClInclude Include="Operation6.h">
       <Filter>Fichiers d%27en-tête\Operations</Filter>
     </ClInclude>
+    <ClInclude Include="OperationTraitement.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationDechetTraiteCompostable.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationDechetTraiteNonRecyclable.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="CreationDechetRecyclable.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

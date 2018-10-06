@@ -7,12 +7,12 @@ public:
 		this->operationSuivanteFalse = operationSuivanteFalse;
 		this->operationSuivanteTrue = operationSuivanteFalse;
 	};
-	virtual bool effectuerOperation(Dechet* dechet);//fonction virtuelle pure
+	virtual bool effectuerOperation(Dechet* dechet);//fonction virtuelle pure //à voir avec le main #specs pas claires
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
-	virtual ~Operation();
+	virtual ~Operation() { delete operationSuivanteFalse; delete operationSuivanteTrue; };
 
 protected:
-	Operation();
+	Operation() { operationSuivanteFalse = NULL; operationSuivanteFalse = NULL; };
 private:
 	Operation* operationSuivanteTrue;
 	Operation* operationSuivanteFalse;
