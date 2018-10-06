@@ -16,6 +16,9 @@
     <Filter Include="Fichiers d%27en-tête\Déchets">
       <UniqueIdentifier>{7e38ae68-d19d-4444-b7fe-f0adf6740d5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Operations">
+      <UniqueIdentifier>{effb55f1-9fb3-4ee0-b965-4a5b09e500da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="UsineTraitement.cpp">
@@ -34,6 +37,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="DechetTraite.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -94,6 +100,27 @@
     </ClInclude>
     <ClInclude Include="DechetTraite.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation1.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation2.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation3.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation4.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation5.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation6.h">
+      <Filter>Fichiers d%27en-tête\Operations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

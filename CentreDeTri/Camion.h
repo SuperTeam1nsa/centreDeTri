@@ -1,10 +1,11 @@
 ﻿#pragma once
 #include <stack>
+#include "DechetTraite.h"
 class Camion
 {
 public:
 	Camion(int maxCapacite);
-	~Camion();
+	virtual ~Camion();
 	bool ajouterDechet(DechetTraite *d);
 	int viderCamion();
 	//Rq: on aurait pu s'éviter les camions bleus verts etc via le polymorphisme des déchets 

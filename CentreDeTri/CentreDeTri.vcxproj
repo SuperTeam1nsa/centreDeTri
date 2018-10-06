@@ -119,6 +119,7 @@
     <ClCompile Include="ChargementDechet.cpp" />
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="DechetTraite.cpp" />
+    <ClCompile Include="Operation.cpp" />
     <ClCompile Include="UQAC.cpp" />
     <ClCompile Include="UsineTraitement.cpp" />
   </ItemGroup>
@@ -140,6 +141,13 @@
     <ClInclude Include="Dechets\SacChips.h" />
     <ClInclude Include="Dechets\VerreCafe.h" />
     <ClInclude Include="DechetTraite.h" />
+    <ClInclude Include="Operation.h" />
+    <ClInclude Include="Operation1.h" />
+    <ClInclude Include="Operation2.h" />
+    <ClInclude Include="Operation3.h" />
+    <ClInclude Include="Operation4.h" />
+    <ClInclude Include="Operation5.h" />
+    <ClInclude Include="Operation6.h" />
     <ClInclude Include="UQAC.h" />
     <ClInclude Include="UsineTraitement.h" />
   </ItemGroup>
