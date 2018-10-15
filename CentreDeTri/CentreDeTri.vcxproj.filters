@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="UsineTraitement.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="ChargementDechet.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -48,11 +45,11 @@
     <ClCompile Include="Operation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="UsineTraitement.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="UsineTraitement.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="ChargementDechet.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -145,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="SequenceOperations.h">
       <Filter>Fichiers d%27en-tête\GenerateurOperation</Filter>
+    </ClInclude>
+    <ClInclude Include="UsineTraitement.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

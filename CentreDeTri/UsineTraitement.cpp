@@ -11,22 +11,17 @@ UsineTraitement::~UsineTraitement()
 {
 }
 
-void UsineTraitement::traiterDechet(Dechet dechet)
+void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
 {
-	if (dechet.getMateriel() == Dechet::bois)
-	{
 
-	}
-	else if (dechet.getMateriel() == Dechet::carton)
-	{
+}
 
-	}
-	else if (dechet.getMateriel() == Dechet::bouteille)
-	{
+void UsineTraitement::preOperation()
+{
+	Log::i("PREOPERATION");
+}
 
-	}
-	else
-	{
-
-	}
+void UsineTraitement::postOperation()
+{
+	Log::i("POSTOPERATION")
 }
