@@ -11,7 +11,7 @@ public:
 	~Depot() {};
 	CamionBleu* getCamionBleu() const { return new CamionBleu(); }
 	CamionBrun* getCamionBrun() const { return new CamionBrun(); }
-	CamionVert* getCAmionVert() const { return new CamionVert(); }
+	CamionVert* getCamionVert() const { return new CamionVert(); }
 	void depotDechetsTraites(CamionVert* camion) { totalIDTNonRecyclable += camion->viderCamion(); }
 	void depotDechetsTraites(CamionBleu* camion) { totalIDTRecyclable += camion->viderCamion(); }
 	void depotDechetsTraites(CamionBrun* camion) { totalIDTCompostable += camion->viderCamion(); }
