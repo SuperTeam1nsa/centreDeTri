@@ -4,7 +4,7 @@
 class ChargementDechet
 {
 public:
-	ChargementDechet(std::list<Dechet*> l) :liste_dechets(l) {};
+	ChargementDechet(std::list<Dechet*>* l) :liste_dechets(*l) {};
 	Dechet* getDechet();
 
 	~ChargementDechet();
