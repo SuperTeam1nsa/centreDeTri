@@ -1,7 +1,6 @@
 #include "UsineTraitement.h"
 
 
-
 UsineTraitement::UsineTraitement()
 {
 }
@@ -23,5 +22,14 @@ void UsineTraitement::preOperation()
 
 void UsineTraitement::postOperation()
 {
-	Log::i("POSTOPERATION")
+	Log::i("POSTOPERATION");
 }
+
+void UsineTraitement::creerDechetTraiteRecyclable(Dechet * dechet)
+{
+	if (!(camionBleu->ajouterDechet(dechet)))
+	{
+
+	}
+}
+

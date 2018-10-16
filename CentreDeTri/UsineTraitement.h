@@ -24,15 +24,13 @@ private:
 	void creerDechetTraiteNonRecyclable(Dechet* dechet);
 	void creerDechetTraiteCompostable(Dechet* dechet);
 	void traiterDechet(Dechet* dechet);
-};
 
-class Log :public UsineTraitement
-{
-	Log(){
-	}
-	~Log(){
-	}
-	void i(string info);
-	void i(Dechet const& dechet);
-	void i(Depot const& depot);
+	class Log 
+	{
+		Log();
+		~Log();
+		void i(string info);
+		void i(Dechet const& dechet);
+		void i(Depot const& depot);
+	};
 };
