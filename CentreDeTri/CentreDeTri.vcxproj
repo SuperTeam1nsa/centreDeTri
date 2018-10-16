@@ -144,6 +144,7 @@
     <ClInclude Include="Dechets\SacChips.h" />
     <ClInclude Include="Dechets\VerreCafe.h" />
     <ClInclude Include="DechetTraite.h" />
+    <ClInclude Include="Depot.h" />
     <ClInclude Include="GenerateurSequenceOperation.h" />
     <ClInclude Include="Operation.h" />
     <ClInclude Include="Operation1.h" />
