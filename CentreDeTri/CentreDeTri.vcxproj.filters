@@ -48,6 +48,9 @@
     <ClCompile Include="Operation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UsineTraitement.h">
@@ -61,9 +64,6 @@
     </ClInclude>
     <ClInclude Include="UQAC.h">
       <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Dechets\BoitecCarton.h">
-      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
     <ClInclude Include="Dechets\BouteilleBiere.h">
       <Filter>Fichiers d%27en-tête\Déchets</Filter>
@@ -148,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="Depot.h">
       <Filter>Fichiers d%27en-tête\Camions</Filter>
+    </ClInclude>
+    <ClInclude Include="Dechets\BoiteCarton.h">
+      <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
