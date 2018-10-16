@@ -1,11 +1,29 @@
 ﻿#include "ChargementDechet.h"
 #include "UsineTraitement.h"
 #include "GenerateurSequenceOperation.h"
+#include "Compteur.h"
 #include "UQAC.h"
 
 void laboratoire2() {
 	ChargementDechet* chargement = UQAC::getChargementDechets();
-	UsineTraitement* usineTraitement
+	UsineTraitement* usineTraitement = new UsineTraitement();
+	GenerateurSequenceOperation gso;
+
+	usineTraitement->chargerOperations(gso.genererSequence(0, usineTraitement));
+	usineTraitement->demarrerTraitement(chargement);
+
+	delete usineTraitement;
+	delete chargement; //I think
+}
+
+void afficherInformation() {
+
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl << "--------------------------" << std::endl
+		<< " NB constructeurs : " << Compteur::getNbConstructeurs() << std::endl
+		<< " NB destructeurs : " << Compteur::getNbDestructeurs() << std::endl;
+	std::cin.get();
+
 }
 
 int main()
