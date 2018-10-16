@@ -7,7 +7,7 @@ public:
 		this->operationSuivanteFalse = operationSuivanteFalse;
 		this->operationSuivanteTrue = operationSuivanteFalse;
 	};
-	virtual bool effectuerOperation(Dechet* dechet) const {};//fonction virtuelle pure //à voir avec le main #specs pas claires=> non finalement^^
+	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure //à voir avec le main #specs pas claires=> non finalement^^
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
 	virtual ~Operation() { delete operationSuivanteFalse; delete operationSuivanteTrue; };
 

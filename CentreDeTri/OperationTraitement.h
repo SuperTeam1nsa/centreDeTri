@@ -9,11 +9,11 @@ public:
 	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; };
 	virtual ~OperationTraitement() { delete usineTraitement; }
 
-	bool effectuerOperation(Dechet* dechet)const override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
+	bool effectuerOperation(Dechet* dechet) override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
 protected:
-	void creerDechetTraiteRecyclable(Dechet* dechet) { UsineTraitement::creerDechetTraiteRecyclable(dechet); }//car inside via friend, juste namespace les ::
-	void creerDechetTraiteNonRecyclable(Dechet* dechet) { UsineTraitement::creerDechetTraiteNonRecyclable(dechet); }
-	void creerDechetTraiteCompostable(Dechet* dechet) { UsineTraitement::creerDechetTraiteCompostable(dechet); }
+	void creerDechetTraiteRecyclable(Dechet* dechet) { usineTraitement->creerDechetTraiteRecyclable(dechet); }//car inside via friend, juste namespace les ::
+	void creerDechetTraiteNonRecyclable(Dechet* dechet) { usineTraitement->creerDechetTraiteNonRecyclable(dechet); }
+	void creerDechetTraiteCompostable(Dechet* dechet) { usineTraitement->creerDechetTraiteCompostable(dechet); }
 private:
 	UsineTraitement *usineTraitement;
 };
