@@ -1,5 +1,5 @@
 #pragma once
-#include "SequenceOPerations.h"
+#include "SequenceOperations.h"
 #include "ChargementDechet.h"
 #include "Depot.h"
 
