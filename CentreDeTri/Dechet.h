@@ -42,8 +42,8 @@ public:
 	string getCouleur() const { return couleur; };
 	materiel getMateriel() const { return mat; };
 	int getPurete() const { return purete; };
-	bool getEstEnStyromousse() const { return styromousse; };
-	bool getEstRigide() const { return rigide; };
+	bool estEnStyromousse() const { return styromousse; };
+	bool estRigide() const { return rigide; };
 	ostream& operator<<(ostream &out);
 
 private:
