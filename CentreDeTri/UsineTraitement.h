@@ -12,6 +12,7 @@ public:
 		camionVert = new CamionVert(*autre.camionVert);
 		camionBleu = new CamionBleu(*autre.camionBleu);
 		camionBrun = new CamionBrun(*autre.camionBrun);
+		Compteur::ajouterConstructeurCopie();
 	}
 	virtual ~UsineTraitement();
 	void chargerOperations(SequenceOperations* sequenceOperation);

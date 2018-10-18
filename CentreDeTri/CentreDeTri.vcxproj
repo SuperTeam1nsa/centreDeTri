@@ -120,7 +120,6 @@
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="DechetTraite.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Operation.cpp" />
     <ClCompile Include="UQAC.cpp" />
     <ClCompile Include="UsineTraitement.cpp" />
   </ItemGroup>

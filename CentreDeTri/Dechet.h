@@ -33,7 +33,7 @@ protected:
 
 public:
 	Dechet();
-	Dechet(Dechet const& autre) : poids(autre.poids), description(autre.description), type(autre.type), couleur(autre.couleur), mat(autre.mat), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) {};
+	Dechet(Dechet const& autre) : poids(autre.poids), description(autre.description), type(autre.type), couleur(autre.couleur), mat(autre.mat), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) { Compteur::ajouterConstructeurCopie(); }
 	int getPoids() const { return poids; };
 	int getId() const { return id; };
 	string getDescription() const { return description; };
