@@ -130,6 +130,7 @@
     <ClInclude Include="CamionBrun.h" />
     <ClInclude Include="CamionVert.h" />
     <ClInclude Include="ChargementDechet.h" />
+    <ClInclude Include="Compteur.h" />
     <ClInclude Include="CreationDechetRecyclable.h" />
     <ClInclude Include="CreationDechetTraiteCompostable.h" />
     <ClInclude Include="CreationDechetTraiteNonRecyclable.h" />

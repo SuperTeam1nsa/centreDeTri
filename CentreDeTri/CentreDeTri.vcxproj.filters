@@ -152,5 +152,8 @@
     <ClInclude Include="Dechets\BoiteCarton.h">
       <Filter>Fichiers d%27en-tête\Déchets</Filter>
     </ClInclude>
+    <ClInclude Include="Compteur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -16,10 +16,9 @@ public:
 	void depotDechetsTraites(CamionBleu* camion) { totalIDTRecyclable += camion->viderCamion(); }
 	void depotDechetsTraites(CamionBrun* camion) { totalIDTCompostable += camion->viderCamion(); }
 	std::ostream& operator <<(std::ostream& out) const {
-		out << std::endl << "--DEPOT--" << std::endl << "totalIDTRecyclable	:" << totalIDTRecyclable
+		return out << std::endl << "--DEPOT--" << std::endl << "totalIDTRecyclable	:" << totalIDTRecyclable
 			<< std::endl << "totalIDTNonRecyclable	:" << totalIDTNonRecyclable
 			<< std::endl << "totalIDTCompostable	:" << totalIDTCompostable;
-		return out;
 	}
 
 private:
