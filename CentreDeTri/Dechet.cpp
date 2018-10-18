@@ -29,16 +29,16 @@ Dechet::~Dechet()
 {
 }
 
-ostream & operator<<(ostream & out, Dechet const & dechet)
+ostream & Dechet::operator<<(ostream & out)
 {
 	std::cout << "-------------------------------" << std::endl;
-	std::cout << "id          : " << dechet.getId() << std::endl;
-	std::cout << "poids       : " << dechet.getPoids() << std::endl;
-	std::cout << "description : " << dechet.getDescription() << std::endl;
-	std::cout << "type        : " << dechet.getType() << std::endl;
-	std::cout << "couleur     : " << dechet.getCouleur() << std::endl;
-	std::cout << "materiel    : " << dechet.getMateriel() << std::endl;
-	std::cout << "purete      : " << dechet.getPurete() << std::endl;
-	std::cout << "styromousse : " << dechet.getEstEnStyromousse() << std::endl;
-	std::cout << "rigide      : " << dechet.getEstRigide() << std::endl;
+	std::cout << "id          : " << getId() << std::endl;
+	std::cout << "poids       : " << getPoids() << std::endl;
+	std::cout << "description : " << getDescription() << std::endl;
+	std::cout << "type        : " << getType() << std::endl;
+	std::cout << "couleur     : " << getCouleur() << std::endl;
+	std::cout << "materiel    : " << getMateriel() << std::endl;
+	std::cout << "purete      : " << getPurete() << std::endl;
+	std::cout << "styromousse : " << getEstEnStyromousse() << std::endl;
+	std::cout << "rigide      : " << getEstRigide() << std::endl;
 }

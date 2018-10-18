@@ -41,6 +41,7 @@ public:
 	int getPurete() const { return purete; };
 	bool getEstEnStyromousse() const { return styromousse; };
 	bool getEstRigide() const { return rigide; };
+	ostream& operator<<(ostream &out);
 
 private:
 	void setPoids(int _poids) { poids = max(min(_poids, 100), 0); };
@@ -53,5 +54,3 @@ private:
 	void setEstEnStyromousse(bool _estEnStyromousse) { styromousse = _estEnStyromousse; };
 	void setEstRigide(bool _estRigide) { rigide = _estRigide; };
 };
-
-ostream& operator<<(ostream &out, Dechet const &dechet);

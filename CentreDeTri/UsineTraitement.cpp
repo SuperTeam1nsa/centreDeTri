@@ -91,5 +91,5 @@ void UsineTraitement::Log::i(Dechet const & dechet)
 
 void UsineTraitement::Log::i(Depot const & depot)
 {
-	cout << depot << endl;
+	depot << cout << endl;
 }
