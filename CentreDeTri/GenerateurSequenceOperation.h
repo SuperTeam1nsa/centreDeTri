@@ -7,12 +7,13 @@
 #include"Operation4.h"
 #include"Operation5.h"
 #include"Operation6.h"
+#include "Compteur.h"
 
 class GenerateurSequenceOperation
 {
 public:
-	GenerateurSequenceOperation() {};
-	~GenerateurSequenceOperation() {};
+	GenerateurSequenceOperation() { Compteur::ajouterConstructeur(); };
+	~GenerateurSequenceOperation() { Compteur::ajouterDestructeur(); };
 	SequenceOperations* genererSequence(int id, UsineTraitement* usineTraitement) const {
 		return id == 0 ? genererSequence0(usineTraitement) :
 			genererSequence1(usineTraitement);

@@ -1,5 +1,4 @@
 ﻿#include "Camion.h"
-#include "Compteur.h"
 //#include <stdexcept>
 
 Camion::Camion(int capacite) :maxCapacite(capacite), capacite(0)

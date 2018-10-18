@@ -1,12 +1,14 @@
 ﻿#pragma once
 #include "Operation.h"
+#include "Compteur.h"
 class SequenceOperations
 {
 public:
-	SequenceOperations() {};
+	SequenceOperations() { Compteur::ajouterConstructeur(); };
 	SequenceOperations(SequenceOperations const& autre) {
 		listeOperation = new Operation(*autre.listeOperation);
 		operationDemarrage = new Operation(*autre.operationDemarrage);
+		Compteur::ajouterConstructeurCopie();
 	}
 	~SequenceOperations();
 	SequenceOperations* ajouterOperation(Operation* operation) {
@@ -32,6 +34,8 @@ SequenceOperations::~SequenceOperations()
 		listeOperation = aux;
 		//on "depile", listeoperation pointant sur le dernier (on aurait pu le faire à partir de demarrage aussi)
 	}*/
+
+	Compteur::ajouterDestructeur();
 
 	Operation* aux;
 	listeOperation = operationDemarrage;
