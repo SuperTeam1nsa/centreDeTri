@@ -56,5 +56,6 @@ int Camion::viderCamion()
 		poidsTot += pile_dechets.top()->getPoids();
 		pile_dechets.pop();
 	}
+	capacite = 0;
 	return poidsTot;
 }

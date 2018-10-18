@@ -44,6 +44,6 @@ SequenceOperations::~SequenceOperations()
 		aux = listeOperation->getOperationSuivante(true);
 		delete listeOperation;
 		listeOperation = aux;
-		//on suit la liste en supprimant au passage //cf note sur le simplement chaine du à la création et absnece de mutateur => getop(false)=quel bt ?
+		//on suit la liste en supprimant au passage //cf note sur le simplement chaine du à la création et abscence de mutateur 
 	}
 }
