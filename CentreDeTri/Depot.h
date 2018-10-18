@@ -2,13 +2,14 @@
 #include "CamionBleu.h"
 #include"CamionBrun.h"
 #include "CamionVert.h"
+#include "Compteur.h"
 #include <iostream>
 
 class Depot
 {
 public:
-	Depot() :totalIDTCompostable(0), totalIDTNonRecyclable(0), totalIDTRecyclable(0) {};
-	~Depot() {};
+	Depot() :totalIDTCompostable(0), totalIDTNonRecyclable(0), totalIDTRecyclable(0) {}
+	~Depot() {}
 	CamionBleu* getCamionBleu() const { return new CamionBleu(); }
 	CamionBrun* getCamionBrun() const { return new CamionBrun(); }
 	CamionVert* getCamionVert() const { return new CamionVert(); }

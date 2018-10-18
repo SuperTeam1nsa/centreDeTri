@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Camion.h"
 #include "Compteur.h"
-#include "DechetTaiteCompostable.h"
+#include "DechetTraiteCompostable.h"
 class CamionBrun :
 	public Camion
 {
