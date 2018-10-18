@@ -1,13 +1,14 @@
 #include "UsineTraitement.h"
 
-
 UsineTraitement::UsineTraitement()
 {
+	Compteur::ajouterConstructeur();
 }
 
 
 UsineTraitement::~UsineTraitement()
 {
+	Compteur::ajouterDestructeur();
 }
 
 void UsineTraitement::chargerOperations(SequenceOperations * _sequenceOperation)

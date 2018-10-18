@@ -1,5 +1,6 @@
 #pragma once
 #include "Dechet.h"
+#include "Compteur.h"
 
 class DechetTraite :
 	public Dechet

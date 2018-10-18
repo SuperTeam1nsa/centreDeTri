@@ -1,16 +1,16 @@
 #include "UQAC.h"
 #include <list>
 
-
-
 UQAC::UQAC()
 {
+	Compteur::ajouterConstructeur();
 }
 
 
 
 UQAC::~UQAC()
 {
+	Compteur::ajouterDestructeur();
 }
 
 /*

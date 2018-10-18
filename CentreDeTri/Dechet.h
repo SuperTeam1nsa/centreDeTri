@@ -2,6 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <iostream>
+#include "Compteur.h"
 
 using namespace std;
 

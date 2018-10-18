@@ -1,13 +1,15 @@
 ﻿#pragma once
 #include "Operation.h"
 #include "UsineTraitement.h"
+#include "Compteur.h"
+
 class OperationTraitement :
 	public Operation
 {
 	friend class UsineTraitement;
 public:
-	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; };
-	virtual ~OperationTraitement() { delete usineTraitement; }
+	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; Compteur::ajouterConstructeur();};
+	virtual ~OperationTraitement() { delete usineTraitement; Compteur::ajouterDestructeur();}
 
 	bool effectuerOperation(Dechet* dechet) override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
 protected:

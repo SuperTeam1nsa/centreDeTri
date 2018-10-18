@@ -2,6 +2,7 @@
 #include "SequenceOperations.h"
 #include "ChargementDechet.h"
 #include "Depot.h"
+#include "Compteur.h"
 
 class UsineTraitement
 {

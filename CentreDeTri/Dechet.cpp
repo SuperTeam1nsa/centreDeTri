@@ -13,6 +13,7 @@ Dechet::Dechet(int poids, string description, int type, string couleur, materiel
 	setMateriel(materiel);
 	setEstEnStyromousse(estEnStyromousse);
 	setEstRigide(estRigide);
+	Compteur::ajouterConstructeur();
 }
 
 Dechet::Dechet(int poids, string description)
@@ -27,6 +28,7 @@ Dechet::Dechet()
 
 Dechet::~Dechet()
 {
+	Compteur::ajouterDestructeur();
 }
 
 ostream & Dechet::operator<<(ostream & out)

@@ -11,6 +11,7 @@
 #include "Dechets/RestantNourriture.h"
 #include "Dechets/SacChips.h"
 #include "Dechets/VerreCafe.h"
+#include "Compteur.h"
 
 class UQAC
 {
