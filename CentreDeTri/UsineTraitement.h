@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "SequenceOperations.h"
 #include "ChargementDechet.h"
 #include "Depot.h"
@@ -11,7 +11,7 @@ public:
 	virtual ~UsineTraitement();
 	void chargerOperations(SequenceOperations* sequenceOperation);
 	void demarrerTraitement(ChargementDechet* chargement);
-	
+	friend class OperationTraitement;
 private:
 	class Log
 	{
