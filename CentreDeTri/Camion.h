@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include <stack>
 #include "DechetTraite.h"
+#include "Compteur.h"
+
 class Camion
 {
 public:

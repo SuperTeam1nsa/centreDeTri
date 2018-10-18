@@ -1,12 +1,14 @@
 ﻿#include "Camion.h"
-#include <stdexcept>
+//#include <stdexcept>
 
 Camion::Camion(int capacite) :maxCapacite(capacite), capacite(0)
 {
+	Compteur::ajouterConstructeur();
 }
 
 Camion::~Camion()
 {
+	Compteur::ajouterDestructeur();
 }
 
 
