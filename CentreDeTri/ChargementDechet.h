@@ -6,17 +6,22 @@
 class ChargementDechet
 {
 public:
-	ChargementDechet(std::list<Dechet*>* l) :liste_dechets(*l) {Compteur::ajouterConstructeur();};
+	ChargementDechet(std::list<Dechet*>* l) :liste_dechets(*l) { Compteur::ajouterConstructeur(); }
 	Dechet* getDechet();
 
-	~ChargementDechet() {
+	~ChargementDechet();
 
-		Compteur::ajouterDestructeur(); 
-	}
 private:
 	std::list<Dechet*> liste_dechets;
 };
 
+ChargementDechet::~ChargementDechet() {
+	for (list<Dechet*>::iterator it = liste_dechets.begin(); it != liste_dechets.end(); ++it) {
+		delete *it;
+	}
+	liste_dechets.resize(0);
+	Compteur::ajouterDestructeur();
+}
 
 Dechet* ChargementDechet::ChargementDechet::getDechet()
 {
