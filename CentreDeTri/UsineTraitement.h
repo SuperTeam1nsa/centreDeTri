@@ -8,6 +8,11 @@ class UsineTraitement
 {
 public:
 	UsineTraitement();
+	UsineTraitement(UsineTraitement const& autre) : sequenceOperations(autre.sequenceOperations), depot(autre.depot) {
+		camionVert = new CamionVert(*autre.camionVert);
+		camionBleu = new CamionBleu(*autre.camionBleu);
+		camionBrun = new CamionBrun(*autre.camionBrun);
+	}
 	virtual ~UsineTraitement();
 	void chargerOperations(SequenceOperations* sequenceOperation);
 	void demarrerTraitement(ChargementDechet* chargement);

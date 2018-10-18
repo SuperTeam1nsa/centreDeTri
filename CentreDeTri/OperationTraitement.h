@@ -7,7 +7,8 @@ class OperationTraitement :
 	public Operation
 {
 public:
-	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; Compteur::ajouterConstructeur(); };
+	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; Compteur::ajouterConstructeur();};
+	OperationTraitement(OperationTraitement const& autre) { usineTraitement = new UsineTraitement(*autre.usineTraitement) };
 	virtual ~OperationTraitement() { delete usineTraitement; Compteur::ajouterDestructeur(); }
 
 	bool effectuerOperation(Dechet* dechet) override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
@@ -16,5 +17,5 @@ protected:
 	void creerDechetTraiteNonRecyclable(Dechet* dechet) { usineTraitement->creerDechetTraiteNonRecyclable(dechet); }
 	void creerDechetTraiteCompostable(Dechet* dechet) { usineTraitement->creerDechetTraiteCompostable(dechet); }
 private:
-	UsineTraitement *usineTraitement;
+	UsineTraitement* usineTraitement;
 };

@@ -16,7 +16,7 @@ public:
 
 private:
 	int poids; 
-	static int id;
+	int id;
 	string description;
 	int type;
 	string couleur;
@@ -33,6 +33,7 @@ protected:
 
 public:
 	Dechet();
+	Dechet(Dechet const& autre) : poids(autre.poids), description(autre.description), type(autre.type), couleur(autre.couleur), mat(autre.mat), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) {};
 	int getPoids() const { return poids; };
 	int getId() const { return id; };
 	string getDescription() const { return description; };

@@ -10,6 +10,7 @@ protected:
 
 public:
 	DechetTraite(Dechet* dechet);
+	DechetTraite(DechetTraite const& autre) { dechet = new Dechet(*autre.dechet); };
 	~DechetTraite();
 	const Dechet* getDechet() const { return dechet; };
 };

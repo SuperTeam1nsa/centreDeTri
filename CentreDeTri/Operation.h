@@ -10,6 +10,10 @@ public:
 		this->operationSuivanteTrue = operationSuivanteFalse;
 		Compteur::ajouterConstructeur();
 	};
+	Operation(Operation const& autre) {
+		operationSuivanteTrue = new Operation(*autre.operationSuivanteTrue);
+		operationSuivanteFalse = new Operation(*autre.operationSuivanteFalse);
+	}
 	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure //à voir avec le main #specs pas claires=> non finalement^^
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
 	virtual ~Operation() { delete operationSuivanteFalse; delete operationSuivanteTrue; Compteur::ajouterDestructeur();};

@@ -4,6 +4,10 @@ class SequenceOperations
 {
 public:
 	SequenceOperations() {};
+	SequenceOperations(SequenceOperations const& autre) {
+		listeOperation = new Operation(*autre.listeOperation);
+		operationDemarrage = new Operation(*autre.operationDemarrage);
+	}
 	~SequenceOperations();
 	SequenceOperations* ajouterOperation(Operation* operation) {
 		listeOperation = operation;
