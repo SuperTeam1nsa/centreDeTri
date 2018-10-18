@@ -6,14 +6,8 @@ DechetTraite::DechetTraite(Dechet * dechet)
 	Compteur::ajouterConstructeur();
 }
 
-DechetTraite::DechetTraite()
-{
-	dechet = new Dechet();
-	Compteur::ajouterConstructeurCopie();
-}
-
 DechetTraite::~DechetTraite()
 {
-	delete ;
+	delete dechet;
 	Compteur::ajouterDestructeur();
 }

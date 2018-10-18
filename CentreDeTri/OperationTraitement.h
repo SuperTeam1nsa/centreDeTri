@@ -8,7 +8,10 @@ class OperationTraitement :
 {
 public:
 	OperationTraitement(UsineTraitement* usineTraitement) :Operation() { this->usineTraitement = usineTraitement; Compteur::ajouterConstructeur();};
-	OperationTraitement(OperationTraitement const& autre) { usineTraitement = new UsineTraitement(*autre.usineTraitement) };
+	OperationTraitement(OperationTraitement const& autre) { 
+		usineTraitement = new UsineTraitement(*autre.usineTraitement); 
+		Compteur::ajouterConstructeurCopie();
+	}
 	virtual ~OperationTraitement() { delete usineTraitement; Compteur::ajouterDestructeur(); }
 
 	bool effectuerOperation(Dechet* dechet) override {/*???????? en lien avec UsineTraitement ??? (retour false comme ça ^^)*/ return false; }
