@@ -12,7 +12,6 @@ public:
 	}
 	Operation(Operation const& autre) { //liste sans information réelle => que copier ? => une liste de même taille
 
-		operationSuivanteTrue = autre.operationSuivanteTrue;
 		Operation* aux = autre.operationSuivanteTrue;
 		Operation* actuel = operationSuivanteTrue;
 		Operation* precedant = NULL;
