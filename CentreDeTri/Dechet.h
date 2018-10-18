@@ -44,7 +44,7 @@ public:
 	int getPurete() const { return purete; };
 	bool estEnStyromousse() const { return styromousse; };
 	bool estRigide() const { return rigide; };
-	ostream& operator<<(ostream &out);
+	ostream& operator<<(ostream &out) const;
 
 private:
 	void setPoids(int _poids) { poids = max(min(_poids, 100), 0); };

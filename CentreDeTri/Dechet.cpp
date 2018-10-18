@@ -31,7 +31,7 @@ Dechet::~Dechet()
 	Compteur::ajouterDestructeur();
 }
 
-ostream & Dechet::operator<<(ostream & out)
+ostream & Dechet::operator<<(ostream & out) const
 {
 	std::cout << "-------------------------------" << std::endl;
 	std::cout << "id          : " << getId() << std::endl;
@@ -41,6 +41,6 @@ ostream & Dechet::operator<<(ostream & out)
 	std::cout << "couleur     : " << getCouleur() << std::endl;
 	std::cout << "materiel    : " << getMateriel() << std::endl;
 	std::cout << "purete      : " << getPurete() << std::endl;
-	std::cout << "styromousse : " << getEstEnStyromousse() << std::endl;
-	std::cout << "rigide      : " << getEstRigide() << std::endl;
+	std::cout << "styromousse : " << estEnStyromousse() << std::endl;
+	std::cout << "rigide      : " << estRigide() << std::endl;
 }

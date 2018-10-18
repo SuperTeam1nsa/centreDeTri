@@ -3,6 +3,9 @@
 #include "ChargementDechet.h"
 #include "Depot.h"
 #include "Compteur.h"
+#include "CreationDechetRecyclable.h"
+#include "CreationDechetTraiteNonRecyclable.h"
+#include "CreationDechetTraiteCompostable.h"
 
 class UsineTraitement
 {
@@ -21,6 +24,7 @@ public:
 private:
 	class Log
 	{
+	public:
 		Log() {};
 		~Log() {};
 		void static i(string info);
