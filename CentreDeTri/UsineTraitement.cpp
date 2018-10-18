@@ -24,6 +24,9 @@ void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
 	
 }
 
+
+
+
 void UsineTraitement::preOperation()
 {
 	Log::i("PREOPERATION");
@@ -66,6 +69,27 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 
 void UsineTraitement::traiterDechet(Dechet * dechet)
 {
-	sequenceOperations.getOperationDemarrage();
+	Operation* operationCourante = sequenceOperations.getOperationDemarrage();
+	while (operationCourante != NULL)
+	{
+		preOperation();
+		bool operationEffectuee = operationCourante->effectuerOperation(dechet);
+		postOperation();
+		operationCourante = operationCourante->getOperationSuivante(operationEffectuee);
+	}
 }
 
+void UsineTraitement::Log::i(string info)
+{
+	cout << info << endl;
+}
+
+void UsineTraitement::Log::i(Dechet const & dechet)
+{
+	cout << dechet << endl;
+}
+
+void UsineTraitement::Log::i(Depot const & depot)
+{
+	depot << cout << endl;
+}
