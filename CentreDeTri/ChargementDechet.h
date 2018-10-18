@@ -9,7 +9,10 @@ public:
 	ChargementDechet(std::list<Dechet*>* l) :liste_dechets(*l) {Compteur::ajouterConstructeur();};
 	Dechet* getDechet();
 
-	~ChargementDechet() { Compteur::ajouterDestructeur(); };
+	~ChargementDechet() {
+
+		Compteur::ajouterDestructeur(); 
+	}
 private:
 	std::list<Dechet*> liste_dechets;
 };

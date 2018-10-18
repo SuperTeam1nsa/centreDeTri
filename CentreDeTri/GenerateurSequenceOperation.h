@@ -39,6 +39,11 @@ SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitemen
 	seq->ajouterOperation(op);
 }
 
+inline SequenceOperations * GenerateurSequenceOperation::genererSequence1(UsineTraitement * usineTraitement) const
+{
+	return NULL;
+}
+
 
 GenerateurSequenceOperation::~GenerateurSequenceOperation()
 {

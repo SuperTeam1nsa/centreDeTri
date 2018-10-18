@@ -9,6 +9,9 @@ UsineTraitement::UsineTraitement()
 UsineTraitement::~UsineTraitement()
 {
 	Compteur::ajouterDestructeur();
+	delete camionBleu;
+	delete camionVert;
+	delete camionBrun;
 }
 
 void UsineTraitement::chargerOperations(SequenceOperations * _sequenceOperation)
@@ -87,7 +90,7 @@ void UsineTraitement::Log::i(string info)
 
 void UsineTraitement::Log::i(Dechet const & dechet)
 {
-	cout << dechet << endl;
+	dechet << cout << endl;
 }
 
 void UsineTraitement::Log::i(Depot const & depot)

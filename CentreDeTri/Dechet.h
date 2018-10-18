@@ -29,11 +29,12 @@ private:
 protected:
 	Dechet(int poids, string description, int type, string couleur, materiel materiel, int purete, bool estEnStyromousse, bool estRigide);
 	Dechet(int poids, string description);
-	~Dechet();
+	
 
 public:
 	Dechet();
 	Dechet(Dechet const& autre) : poids(autre.poids), description(autre.description), type(autre.type), couleur(autre.couleur), mat(autre.mat), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) { Compteur::ajouterConstructeurCopie(); }
+	~Dechet();
 	int getPoids() const { return poids; };
 	int getId() const { return id; };
 	string getDescription() const { return description; };

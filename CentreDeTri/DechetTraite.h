@@ -9,12 +9,17 @@ protected:
 	Dechet* dechet;
 
 public:
-	DechetTraite(Dechet* dechet);
+	DechetTraite(Dechet* dechet) {
+		this->dechet = dechet;
+		Compteur::ajouterConstructeur();
+	}
 	DechetTraite(DechetTraite const& autre) { 
 		dechet = new Dechet(*autre.dechet); 
 		Compteur::ajouterConstructeurCopie();
 	}
-	~DechetTraite();
+	virtual ~DechetTraite() {
+		delete dechet;
+		Compteur::ajouterDestructeur();
+	}
 	const Dechet* getDechet() const { return dechet; };
 };
-
