@@ -26,12 +26,14 @@ public:
 		//operationSuivanteTrue = new Operation(autre.operationSuivanteTrue, autre.operationSuivanteFalse);
 		//operationSuivanteFalse = new Operation(autre.operationSuivanteTrue, autre.operationSuivanteFalse);
 	}
-	virtual bool effectuerOperation(Dechet* dechet) const { return false; }//fonction virtuelle pure //à voir avec le main #specs pas claires=> non finalement^^
+	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure //à voir avec le main #specs pas claires=> non finalement^^
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
 	virtual ~Operation() { delete operationSuivanteFalse; delete operationSuivanteTrue; Compteur::ajouterDestructeur(); }
 
 protected:
-	Operation() { operationSuivanteFalse = NULL; operationSuivanteFalse = NULL; }
+	Operation() {
+		operationSuivanteFalse = NULL; operationSuivanteFalse = NULL; Compteur::ajouterConstructeur();
+	}
 private:
 	Operation* operationSuivanteTrue;
 	Operation* operationSuivanteFalse;

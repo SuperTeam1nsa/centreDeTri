@@ -6,7 +6,7 @@ class Operation1 :
 	public Operation
 {
 public:
-	Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) :Operation(operationSuivanteTrue, operationSuivanteFalse) {Compteur::ajouterConstructeur();};
-	virtual ~Operation1() {Compteur::ajouterDestructeur();};
-	bool effectuerOperation(Dechet* dechet) const override { return (dechet->estEnStyromousse() | dechet->estRigide()); }
+	Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) :Operation(operationSuivanteTrue, operationSuivanteFalse) { Compteur::ajouterConstructeur(); };
+	virtual ~Operation1() { Compteur::ajouterDestructeur(); };
+	bool effectuerOperation(Dechet* dechet)  override { return (dechet->estEnStyromousse() | dechet->estRigide()); }
 };

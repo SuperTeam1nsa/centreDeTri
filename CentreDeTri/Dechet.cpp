@@ -1,4 +1,4 @@
-#include "Dechet.h"
+﻿#include "Dechet.h"
 
 int Dechet::idCourant = 1;
 
@@ -33,7 +33,7 @@ Dechet::~Dechet()
 
 ostream & Dechet::operator<<(ostream & out) const
 {
-	std::cout << "-------------------------------" << std::endl;
+	return out << "-------------------------------" << std::endl;
 	std::cout << "id          : " << getId() << std::endl;
 	std::cout << "poids       : " << getPoids() << std::endl;
 	std::cout << "description : " << getDescription() << std::endl;

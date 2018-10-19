@@ -1,7 +1,5 @@
-﻿#include "ChargementDechet.h"
-#include "UsineTraitement.h"
+﻿#include "UsineTraitement.h"
 #include "GenerateurSequenceOperation.h"
-#include "Compteur.h"
 #include "UQAC.h"
 
 void laboratoire2() {

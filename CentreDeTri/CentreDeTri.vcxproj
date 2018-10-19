@@ -118,8 +118,6 @@
     <ClCompile Include="Camion.cpp" />
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="UQAC.cpp" />
-    <ClCompile Include="UsineTraitement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camion.h" />
