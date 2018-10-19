@@ -116,8 +116,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camion.cpp" />
+    <ClCompile Include="ChargementDechet.cpp" />
+    <ClCompile Include="Compteur.cpp" />
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OperationTraitement.cpp" />
+    <ClCompile Include="SequenceOperations.cpp" />
+    <ClCompile Include="UsineTraitement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camion.h" />

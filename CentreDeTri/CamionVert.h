@@ -7,8 +7,8 @@ class CamionVert :
 	public Camion
 {
 public:
-	CamionVert() :Camion(40) { Compteur::ajouterConstructeur(); };
-	~CamionVert() { Compteur::ajouterDestructeur(); };
-	bool ajouterDechet(DechetTraiteNonRecyclable *d) { ajouterDechet(d); };
+	CamionVert() :Camion(40) { Compteur::ajouterConstructeur(); }
+	~CamionVert() { Compteur::ajouterDestructeur(); }
+	bool ajouterDechet(DechetTraiteNonRecyclable *d) { return Camion::ajouterDechet(d); }
 
 };

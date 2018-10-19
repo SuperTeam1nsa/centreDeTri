@@ -20,7 +20,7 @@ public:
 	};
 private:
 	SequenceOperations* genererSequence0(UsineTraitement* usineTraitement) const;
-	SequenceOperations* genererSequence1(UsineTraitement* usineTraitement) const;
+	SequenceOperations* genererSequence1(UsineTraitement* usineTraitement) const { return NULL; }
 };
 
 
@@ -37,15 +37,5 @@ SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitemen
 	Operation2 *op2 = new Operation2(NULL, op1);
 	Operation2 *op2 = new Operation2(NULL, op1);*/
 	seq->ajouterOperation(op);
-}
-
-inline SequenceOperations * GenerateurSequenceOperation::genererSequence1(UsineTraitement * usineTraitement) const
-{
-	return NULL;
-}
-
-
-GenerateurSequenceOperation::~GenerateurSequenceOperation()
-{
-
+	return seq;
 }

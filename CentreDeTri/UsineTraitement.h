@@ -1,27 +1,24 @@
 ﻿#pragma once
+#include "OperationTraitement.h"
 #include "SequenceOperations.h"
 #include "ChargementDechet.h"
 #include "Depot.h"
 #include "Compteur.h"
-#include "CreationDechetRecyclable.h"
-#include "CreationDechetTraiteNonRecyclable.h"
-#include "CreationDechetTraiteCompostable.h"
 
+class OperationTraitement;
 class UsineTraitement
 {
 public:
-	UsineTraitement() :camionBleu(new CamionBleu()), camionBrun(new CamionBrun()), camionVert(new CamionVert()) { Compteur::ajouterConstructeur(); }
-	UsineTraitement(UsineTraitement const& autre) : sequenceOperations(autre.sequenceOperations), depot(autre.depot) {
-		camionVert = new CamionVert(*autre.camionVert);
-		camionBleu = new CamionBleu(*autre.camionBleu);
-		camionBrun = new CamionBrun(*autre.camionBrun);
-		Compteur::ajouterConstructeurCopie();
-	}
-	virtual ~UsineTraitement();
+	UsineTraitement();
+	UsineTraitement(UsineTraitement const& autre);
+
+
+	void demarrerTraitement(ChargementDechet* chargement);
 	void chargerOperations(SequenceOperations* sequenceOperation);
-	void demarrerTraitement(ChargementDechet* chargement) {/*à compléter ! */ }
-	friend class OperationTraitement;
+	virtual ~UsineTraitement();
+
 private:
+	friend class OperationTraitement;
 	class Log
 	{
 	public:
@@ -46,61 +43,3 @@ private:
 	void traiterDechet(Dechet* dechet);
 
 };
-UsineTraitement::~UsineTraitement()
-{
-	Compteur::ajouterDestructeur();
-	delete camionBleu;
-	delete camionVert;
-	delete camionBrun;
-}
-
-void UsineTraitement::chargerOperations(SequenceOperations * _sequenceOperation)
-{
-	sequenceOperations.definirOperationDemarrage(_sequenceOperation->getOperationDemarrage());
-	while (_sequenceOperation->getOperationDemarrage() != NULL)
-	{
-		sequenceOperations.ajouterOperation(_sequenceOperation->getOperationDemarrage());
-	}
-}
-
-void UsineTraitement::creerDechetTraiteRecyclable(Dechet * dechet)
-{
-	DechetTraiteRecyclable* dechetTraite = new DechetTraiteRecyclable(dechet);
-	if (!(camionBleu->ajouterDechet(dechetTraite)))
-	{
-		depot.depotDechetsTraites(camionBleu);
-		camionBleu->ajouterDechet(dechetTraite);
-	}
-}
-
-void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
-{
-	DechetTraiteNonRecyclable* dechetTraite = new DechetTraiteNonRecyclable(dechet);
-	if (!(camionVert->ajouterDechet(dechetTraite)))
-	{
-		depot.depotDechetsTraites(camionVert);
-		camionVert->ajouterDechet(dechetTraite);
-	}
-}
-
-void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
-{
-	DechetTraiteCompostable* dechetTraite = new DechetTraiteCompostable(dechet);
-	if (!(camionBrun->ajouterDechet(dechetTraite)))
-	{
-		depot.depotDechetsTraites(camionBrun);
-		camionBrun->ajouterDechet(dechetTraite);
-	}
-}
-
-void UsineTraitement::traiterDechet(Dechet * dechet)
-{
-	Operation* operationCourante = sequenceOperations.getOperationDemarrage();
-	while (operationCourante != NULL)
-	{
-		preOperation();
-		bool operationEffectuee = operationCourante->effectuerOperation(dechet);
-		postOperation();
-		operationCourante = operationCourante->getOperationSuivante(operationEffectuee);
-	}
-}

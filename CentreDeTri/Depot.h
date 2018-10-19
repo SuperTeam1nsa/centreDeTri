@@ -9,6 +9,10 @@ class Depot
 {
 public:
 	Depot() :totalIDTCompostable(0), totalIDTNonRecyclable(0), totalIDTRecyclable(0) { Compteur::ajouterConstructeur(); }
+	Depot(Depot const& c) :totalIDTCompostable(c.totalIDTCompostable), totalIDTNonRecyclable(c.totalIDTNonRecyclable), totalIDTRecyclable(c.totalIDTRecyclable)
+	{
+		Compteur::ajouterConstructeurCopie();
+	}
 	~Depot() { Compteur::ajouterDestructeur(); }
 	CamionBleu* getCamionBleu() const { return new CamionBleu(); }
 	CamionBrun* getCamionBrun() const { return new CamionBrun(); }
