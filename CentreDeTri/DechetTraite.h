@@ -1,9 +1,8 @@
-#pragma once
+﻿#pragma once
 #include "Dechet.h"
 #include "Compteur.h"
 
-class DechetTraite :
-	public Dechet
+class DechetTraite
 {
 protected:
 	Dechet* dechet;
@@ -13,13 +12,13 @@ public:
 		this->dechet = dechet;
 		Compteur::ajouterConstructeur();
 	}
-	DechetTraite(DechetTraite const& autre) { 
-		dechet = new Dechet(*autre.dechet); 
+	DechetTraite(DechetTraite const& autre) {
+		dechet = new Dechet(*autre.dechet);
 		Compteur::ajouterConstructeurCopie();
 	}
 	virtual ~DechetTraite() {
 		delete dechet;
 		Compteur::ajouterDestructeur();
 	}
-	const Dechet* getDechet() const { return dechet; };
+	const Dechet* getDechet() const { return dechet; }
 };

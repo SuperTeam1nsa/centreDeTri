@@ -15,7 +15,7 @@ public:
 
 	void demarrerTraitement(ChargementDechet* chargement);
 	void chargerOperations(SequenceOperations* sequenceOperation);
-	virtual ~UsineTraitement();
+	~UsineTraitement();
 
 private:
 	friend class OperationTraitement;

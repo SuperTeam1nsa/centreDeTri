@@ -17,7 +17,7 @@ Camion::Camion(Camion& c) : maxCapacite(c.maxCapacite), capacite(c.capacite)
 	while (!aux.empty())
 	{
 		c.pile_dechets.push(aux.top());
-		pile_dechets.push(new DechetTraite(aux.top()));
+		pile_dechets.push(new DechetTraite(*aux.top()));
 		aux.pop();
 	}
 	Compteur::ajouterConstructeurCopie();
@@ -53,7 +53,7 @@ int Camion::viderCamion()
 	int poidsTot = 0;
 	while (!pile_dechets.empty())
 	{
-		poidsTot += pile_dechets.top()->getPoids();
+		poidsTot += pile_dechets.top()->getDechet()->getPoids();
 		pile_dechets.pop();
 	}
 	capacite = 0;
