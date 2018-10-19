@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChargementDechet" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChargementDechet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UQAC" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>UQAC.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dechet" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FgQAEAgABBAgAgIAKCCAQAQAQdJBAAQAAIAAAAABAhA=</HashCode>
+      <FileName>Dechet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DechetTraite" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>DechetTraite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UsineTraitement" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAMAAAAEAACAEAAAAAAQwEgAAAAkAAYAA=</HashCode>
+      <FileName>UsineTraitement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Camion" Collapsed="true">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAgAAAAAAAAgAAAAAAAAAAAAAAACQACAABAAAAA=</HashCode>
+      <FileName>Camion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamionVert" Collapsed="true">
+    <Position X="1.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAIAA=</HashCode>
+      <FileName>CamionVert.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Depot" Collapsed="true">
+    <Position X="2" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAACAAEBAAAAAAAIAggIAAAAAAAg=</HashCode>
+      <FileName>Depot.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoiteCarton" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dechets\BoiteCarton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GenerateurSequenceOperation" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAACAAAAgAAAAAAAAADAA=</HashCode>
+      <FileName>GenerateurSequenceOperation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SequenceOperations" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIABEgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAI=</HashCode>
+      <FileName>SequenceOperations.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreationDechetRecyclable" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>CreationDechetRecyclable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Operation" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAIAAIAA=</HashCode>
+      <FileName>Operation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Operation1" Collapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Operation1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OperationTraitement" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAACAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAYAA=</HashCode>
+      <FileName>OperationTraitement.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Compteur" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgAgAEABAAAIAAAAAAAAAAIAAAAAgIAAgAAAAEA=</HashCode>
+      <FileName>Compteur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DechetTraiteCompostable" Collapsed="true">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>DechetTraiteCompostable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
