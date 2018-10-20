@@ -17,9 +17,8 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	Compteur::ajouterConstructeur();
 }
 
-Dechet::Dechet(int poids, string description)
+Dechet::Dechet(int poids, string description) :Dechet(poids, description, 0, string("inconnue"), INCONNU, 0, false, false)
 {
-	Dechet::Dechet(poids, description, 0, string("inconnue"), INCONNU, 0, false, false);
 }
 
 Dechet::~Dechet()
