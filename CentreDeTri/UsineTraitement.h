@@ -29,7 +29,7 @@ private:
 		void static i(Depot const& depot) { depot << std::cout << std::endl; }
 	};
 
-	SequenceOperations sequenceOperations;
+	SequenceOperations* sequenceOperations;
 	Depot depot;
 	CamionBleu* camionBleu;
 	CamionVert* camionVert;

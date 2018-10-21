@@ -26,10 +26,9 @@ Camion::Camion(Camion& c) : maxCapacite(c.maxCapacite), capacite(c.capacite)
 Camion::~Camion()
 {
 	Compteur::ajouterDestructeur();
-
 	while (!pile_dechets.empty())
 	{
-		delete pile_dechets.top();
+		//delete pile_dechets.top(); inutile car pop appele le destrcuteur de l'objet
 		pile_dechets.pop();
 	}
 }
