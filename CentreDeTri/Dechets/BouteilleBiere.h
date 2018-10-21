@@ -6,5 +6,5 @@ class BouteilleBiere :
 {
 public:
 	BouteilleBiere() :Dechet(1, "Bouteille de biere vide", 0, "vert", BOUTEILLE, 95, false, true) { Compteur::ajouterConstructeur(); }
-	~BouteilleBiere() { Compteur::ajouterDestructeur(); }
+	virtual ~BouteilleBiere() { Compteur::ajouterDestructeur(); }
 };

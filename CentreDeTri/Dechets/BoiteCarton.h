@@ -7,5 +7,5 @@ class BoiteCarton :
 {
 public:
 	BoiteCarton() :Dechet(3, "Grosse boite de demenagement", 0, "marron", CARTON, 100, false, true) { Compteur::ajouterConstructeur(); }
-	~BoiteCarton() { Compteur::ajouterDestructeur(); }
+	virtual ~BoiteCarton() { Compteur::ajouterDestructeur(); }
 };

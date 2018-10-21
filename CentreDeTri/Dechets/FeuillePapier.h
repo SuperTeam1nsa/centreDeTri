@@ -6,5 +6,5 @@ class FeuillePapier :
 {
 public:
 	FeuillePapier() :Dechet(1, "Tas de feuilles de papier", 0, "blanc", PAPIER, 90, false, false) { Compteur::ajouterConstructeur(); }
-	~FeuillePapier() { Compteur::ajouterDestructeur(); }
+	virtual ~FeuillePapier() { Compteur::ajouterDestructeur(); }
 };

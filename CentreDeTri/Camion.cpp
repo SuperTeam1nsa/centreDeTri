@@ -28,7 +28,7 @@ Camion::~Camion()
 	Compteur::ajouterDestructeur();
 	while (!pile_dechets.empty())
 	{
-		//delete pile_dechets.top(); inutile car pop appele le destrcuteur de l'objet
+		delete pile_dechets.top();
 		pile_dechets.pop();
 	}
 }

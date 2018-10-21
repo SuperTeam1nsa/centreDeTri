@@ -36,7 +36,7 @@ public:
 		couleur(autre.couleur), materiel(autre.materiel), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) {
 		Compteur::ajouterConstructeurCopie();
 	}
-	/*virtual */~Dechet();
+	virtual ~Dechet();
 	int getPoids() const { return poids; }
 	int getId() const { return id; }
 	string getDescription() const { return description; }

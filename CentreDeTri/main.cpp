@@ -4,13 +4,13 @@
 
 void laboratoire2() {
 	ChargementDechet* chargement = UQAC::getChargementDechets();
-	UsineTraitement* usineTraitement = new UsineTraitement();
+	/*UsineTraitement* usineTraitement = new UsineTraitement();
 	GenerateurSequenceOperation gso;
 
 	usineTraitement->chargerOperations(gso.genererSequence(0, usineTraitement));
 	usineTraitement->demarrerTraitement(chargement);
 
-	delete usineTraitement;
+	delete usineTraitement;*/
 	delete chargement; //I think
 }
 

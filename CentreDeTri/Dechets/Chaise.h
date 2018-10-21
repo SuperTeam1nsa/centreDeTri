@@ -6,5 +6,5 @@ class Chaise :
 {
 public:
 	Chaise() :Dechet(6, "Chaise", 0, "rouge", BOIS, 100, false, true) { Compteur::ajouterConstructeur(); }
-	~Chaise() { Compteur::ajouterDestructeur(); }
+	virtual ~Chaise() { Compteur::ajouterDestructeur(); }
 };
