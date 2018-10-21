@@ -6,5 +6,5 @@ class SacChips :
 {
 public:
 	SacChips() :Dechet(1, "Sac de chips vide", 3, "jaune", PLASTIQUE, 80, false, false) { Compteur::ajouterConstructeur(); }
-	virtual ~SacChips() { Compteur::ajouterDestructeur(); }
+	~SacChips() { Compteur::ajouterDestructeur(); }
 };

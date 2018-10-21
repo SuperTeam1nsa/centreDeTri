@@ -4,7 +4,7 @@
 class SequenceOperations
 {
 public:
-	SequenceOperations() { Compteur::ajouterConstructeur(); };
+	SequenceOperations() :listeOperation(NULL), operationDemarrage(NULL) { Compteur::ajouterConstructeur(); };
 	SequenceOperations(SequenceOperations const& autre) {
 		listeOperation = new Operation(*autre.listeOperation);
 		operationDemarrage = listeOperation;
@@ -13,6 +13,7 @@ public:
 	~SequenceOperations();
 	SequenceOperations* ajouterOperation(Operation* operation) {
 		listeOperation = operation;
+		operationDemarrage = operation;
 		//chainage de la liste chainee contenue dans operation (false=precedant, true=suivant) ds le constructeur de opération
 		return this;
 	}

@@ -7,13 +7,13 @@ class Operation
 public:
 	Operation(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) {
 		this->operationSuivanteFalse = operationSuivanteFalse;
-		this->operationSuivanteTrue = operationSuivanteFalse;
+		this->operationSuivanteTrue = operationSuivanteTrue;
 		Compteur::ajouterConstructeur();
 	}
 	Operation(Operation const& autre) { //liste sans information réelle => que copier ? => une liste de même taille
 
 		Operation* aux = autre.operationSuivanteTrue;
-		Operation* actuel = operationSuivanteTrue;
+		Operation* actuel = this;
 		Operation* precedant = NULL;
 		while (aux != NULL) {
 			aux = aux->operationSuivanteTrue;

@@ -2,7 +2,8 @@
 #include "OperationTraitement.h"
 //UsineTraitemetn =Storage
 //OperationTraitement= StorageHistory
-UsineTraitement::UsineTraitement() :camionBleu(new CamionBleu()), camionBrun(new CamionBrun()), camionVert(new CamionVert())
+UsineTraitement::UsineTraitement() :camionBleu(new CamionBleu()), camionBrun(new CamionBrun()),
+camionVert(new CamionVert()), sequenceOperations(NULL)
 {
 
 	Compteur::ajouterConstructeur();

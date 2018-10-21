@@ -17,12 +17,12 @@
   <Class Name="Dechet" Collapsed="true">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>FgQAEAgABBAgAgIAKCCAQAQAQdJBAAQAAIAAAAABAhA=</HashCode>
+      <HashCode>FgQAAAgABBAgAgIAKACAQAQAAVJBAAQAAIAAAAAFAhA=</HashCode>
       <FileName>Dechet.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DechetTraite" Collapsed="true">
-    <Position X="9.75" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
       <FileName>DechetTraite.h</FileName>
@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CamionVert" Collapsed="true">
-    <Position X="1.25" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAIAA=</HashCode>
       <FileName>CamionVert.h</FileName>
@@ -113,7 +113,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DechetTraiteCompostable" Collapsed="true">
-    <Position X="9.75" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>DechetTraiteCompostable.h</FileName>
