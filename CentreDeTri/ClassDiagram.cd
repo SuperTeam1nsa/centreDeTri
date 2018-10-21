@@ -78,7 +78,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CreationDechetRecyclable" Collapsed="true">
-    <Position X="6" Y="2" Width="1.5" />
+    <Position X="6" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>CreationDechetRecyclable.h</FileName>
@@ -99,7 +99,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="OperationTraitement" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="6" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAAAACAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAYAA=</HashCode>
       <FileName>OperationTraitement.h</FileName>
@@ -113,7 +113,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="DechetTraiteCompostable" Collapsed="true">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>DechetTraiteCompostable.h</FileName>

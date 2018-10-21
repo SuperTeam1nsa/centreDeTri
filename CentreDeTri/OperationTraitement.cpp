@@ -5,7 +5,7 @@ OperationTraitement::OperationTraitement(UsineTraitement* usineT) :Operation() {
 	usineTraitement = usineT;
 	Compteur::ajouterConstructeur();
 }
-OperationTraitement::OperationTraitement(OperationTraitement const& autre) {
+OperationTraitement::OperationTraitement(OperationTraitement const& autre) : Operation(autre) {
 	usineTraitement = new UsineTraitement(*autre.usineTraitement);
 	Compteur::ajouterConstructeurCopie();
 }
