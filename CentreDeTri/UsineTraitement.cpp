@@ -64,6 +64,9 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 
 void UsineTraitement::traiterDechet(Dechet * dechet)
 {
+	//on a un déchet on le fait passer par les operations #test rigide etc, qui nous donne selon la valeur du test
+	// vrai/faux l'operation suivante à effectuer #programmé dans la sequence #pas au hasard
+	//permet d'aboutir à la création du bon type de dechet (la classe création hérite de opération) # c'est juste l'op finale
 	Operation* operationCourante = sequenceOperations->getOperationDemarrage();
 	while (operationCourante != NULL)
 	{

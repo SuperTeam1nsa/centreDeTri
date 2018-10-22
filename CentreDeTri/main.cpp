@@ -32,6 +32,7 @@ public:
 };
 int main()
 {
+
 	laboratoire2();
 	afficherInformation();
 
