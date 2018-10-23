@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Dechet.h"
+#include <utility>
 #include "Compteur.h"
 
 class Operation
@@ -22,7 +23,7 @@ protected:
 private:
 	Operation* operationSuivanteTrue;
 	Operation* operationSuivanteFalse;
-	//Operation(Operation const& autre);// empêche la copie
+	//Operation(Operation const& autre) {// empêche la copie
 
 	//ce qui est important c'est le type des operation : creation, op1, op2 etc #vraie donnée
 
@@ -48,10 +49,16 @@ private:
 
 	*/
 	//2nde solution
-	//vraie methode via un make qui renvoie un objet de son type #comme un constructeur (recursif via Operation(&peration)) ) en virtuel bien sur
-	//#factory pattern
-	//operationSuivanteFalse = autre.operationSuivanteFalse.make(new Operation(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
+	//vraie methode via un makeObject qui renvoie un objet de son type #comme un constructeur (recursif via Operation(&peration)) ) en virtuel bien sur
+	//fonction à déclarer #factory pattern
+	//operationSuivanteFalse = autre.operationSuivanteFalse.makeObjetc(new Operation(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
 	//operationSuivanteTrue = autre.operationSuivanteTrue.make(new Operation(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
 
+		//rq c++ 11 and up : #decltype,declval, result_of = inefficaces
+		//operationSuivanteFalse = new std::remove_reference<decltype(*autre.operationSuivanteFalse)>::type(new Operation(*autre.operationSuivanteTrue),new Operation(*autre.operationSuivanteFalse));
+		/*decltype(e) will return the "declared type of e", which is known at compile-time.
+It is impossible to retrieve the actual type of a derived class at run-time using decltype. If you want to "clone" depending on the run-time type of a polymorphic object, you can use virtual and override.*/
 
+
+//}
 };

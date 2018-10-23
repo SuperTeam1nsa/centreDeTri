@@ -23,13 +23,7 @@ void afficherInformation() {
 	std::cin.get();
 
 }
-class D {
 
-public:
-	D() { printf("D construit"); }
-	~D() { printf("D détruit !"); }
-
-};
 int main()
 {
 
