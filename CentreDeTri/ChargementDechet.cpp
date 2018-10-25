@@ -13,11 +13,11 @@ ChargementDechet::~ChargementDechet() {
 	Compteur::ajouterDestructeur();
 }
 
-Dechet* ChargementDechet::ChargementDechet::getDechet()
+Dechet* ChargementDechet::getDechet()
 {
 	Dechet* d = new Dechet(*liste_dechets.front());
-	delete liste_dechets.front();
-	liste_dechets.pop_front();
+	//delete liste_dechets.front();
+	//liste_dechets.pop_front();
 	return d;
 
 }
