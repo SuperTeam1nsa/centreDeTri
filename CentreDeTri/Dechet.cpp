@@ -12,7 +12,8 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	this->materiel = materiel;
 	this->styromousse = estEnStyromousse;
 	this->rigide = rigide;
-	this->id = id;
+	this->id = idCourant;
+	printf("Cstr dechet id:%d, idCourant : %d \n", id, idCourant);
 	idCourant++;
 	Compteur::ajouterConstructeur();
 }
@@ -28,14 +29,14 @@ Dechet::~Dechet()
 
 ostream & Dechet::operator<<(ostream & out) const
 {
-	return out << "-------------------------------" << std::endl;
-	std::cout << "id          : " << getId() << std::endl;
-	std::cout << "poids       : " << getPoids() << std::endl;
-	std::cout << "description : " << getDescription() << std::endl;
-	std::cout << "type        : " << getType() << std::endl;
-	std::cout << "couleur     : " << getCouleur() << std::endl;
-	std::cout << "materiel    : " << materiel << std::endl;
-	std::cout << "purete      : " << getPurete() << std::endl;
-	std::cout << "styromousse : " << estEnStyromousse() << std::endl;
-	std::cout << "rigide      : " << estRigide() << std::endl;
+	return out << "-------------------------------" << std::endl
+		<< "id          : " << getId() << std::endl
+		<< "poids       : " << getPoids() << std::endl
+		<< "description : " << getDescription() << std::endl
+		<< "type        : " << getType() << std::endl
+		<< "couleur     : " << getCouleur() << std::endl
+		<< "materiel    : " << materiel << std::endl
+		<< "purete      : " << getPurete() << std::endl
+		<< "styromousse : " << estEnStyromousse() << std::endl
+		<< "rigide      : " << estRigide() << std::endl;
 }

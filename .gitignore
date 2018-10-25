@@ -15,3 +15,12 @@ CentreDeTri.sln
 /CentreDeTri/Debug/CentreDeTri.tlog/CentreDeTri.lastbuildstate
 /CentreDeTri/Debug/Camion.obj
 /CentreDeTri/Debug/Dechet.obj
+*.exe
+*.exe
+*.exe
+*.ilk
+*.pdb
+*.tlog
+*.tlog
+*.tlog
+*.obj
