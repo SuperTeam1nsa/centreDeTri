@@ -16,8 +16,8 @@ ChargementDechet::~ChargementDechet() {
 Dechet* ChargementDechet::getDechet()
 {
 	Dechet* d = new Dechet(*liste_dechets.front());
-	//delete liste_dechets.front();
-	//liste_dechets.pop_front();
-	return d;
+	delete liste_dechets.front();
+	liste_dechets.pop_front();
+	return d;// liste_dechets.front();//d;
 
 }

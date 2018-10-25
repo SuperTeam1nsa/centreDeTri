@@ -6,7 +6,7 @@ void laboratoire2() {
 	ChargementDechet* chargement = UQAC::getChargementDechets();
 	//UsineTraitement* usineTraitement = new UsineTraitement();
 	//GenerateurSequenceOperation gso;
-	*chargement->getDechet() << std::cout << std::endl;
+	*(chargement->getDechet()) << std::cout << std::endl;
 	//usineTraitement->chargerOperations(gso.genererSequence(0, usineTraitement));
 	//usineTraitement->demarrerTraitement(chargement);
 

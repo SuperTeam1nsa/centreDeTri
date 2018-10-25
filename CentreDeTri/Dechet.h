@@ -32,8 +32,9 @@ protected:
 
 
 public:
-	Dechet(Dechet const& autre) : poids(autre.poids), description(autre.description), type(autre.type),
-		couleur(autre.couleur), materiel(autre.materiel), purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) {
+	Dechet(Dechet const& autre) : poids(autre.poids), id(autre.id), description(autre.description), type(autre.type),
+		couleur(autre.couleur), materiel(autre.materiel),
+		purete(autre.purete), styromousse(autre.styromousse), rigide(autre.rigide) {
 		Compteur::ajouterConstructeurCopie();
 	}
 	virtual ~Dechet();
