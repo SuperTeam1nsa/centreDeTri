@@ -24,3 +24,6 @@ CentreDeTri.sln
 *.tlog
 *.tlog
 *.obj
+*.exe
+*.ilk
+*.pdb
