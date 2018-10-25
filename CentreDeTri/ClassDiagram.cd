@@ -77,10 +77,10 @@
       <FileName>SequenceOperations.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CreationDechetRecyclable" Collapsed="true">
+  <Class Name="CreationDechetTraiteRecyclable" Collapsed="true">
     <Position X="6" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAQAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAAAAIAA=</HashCode>
       <FileName>CreationDechetRecyclable.h</FileName>
     </TypeIdentifier>
   </Class>
