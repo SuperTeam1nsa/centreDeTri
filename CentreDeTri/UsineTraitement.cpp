@@ -24,7 +24,15 @@ UsineTraitement::~UsineTraitement()
 }
 
 void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
-{//à compléter
+{
+	Dechet* dechet = chargement->getDechet();
+	while (dechet != NULL)
+	{
+		UsineTraitement::Log::i(*dechet);
+		traiterDechet(dechet);
+	}
+	delete chargement;
+	UsineTraitement::Log::i(depot);
 }
 
 void UsineTraitement::chargerOperations(SequenceOperations * seqOpe)
