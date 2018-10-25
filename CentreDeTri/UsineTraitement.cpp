@@ -31,6 +31,7 @@ void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
 		printf("here");
 		UsineTraitement::Log::i(*dechet);
 		traiterDechet(dechet);
+		dechet = chargement->getDechet();
 	}
 	delete chargement;
 	UsineTraitement::Log::i(depot);
@@ -47,7 +48,9 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet * dechet)
 	if (!(camionBleu->ajouterDechet(dechetT)))
 	{
 		depot.depotDechetsTraites(camionBleu);
+		camionBleu = depot.getCamionBleu;
 		camionBleu->ajouterDechet(dechetT);
+		UsineTraitement::Log::i("AJOUT DTR : " + to_string(dechet->getId()));
 	}
 }
 
@@ -57,7 +60,10 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 	if (!(camionVert->ajouterDechet(dechetT)))
 	{
 		depot.depotDechetsTraites(camionVert);
+		camionVert = depot.getCamionVert();
 		camionVert->ajouterDechet(dechetT);
+
+		UsineTraitement::Log::i("AJOUT DTNR : " + to_string(dechet->getId()));
 	}
 }
 
@@ -67,7 +73,9 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 	if (!(camionBrun->ajouterDechet(dechetT)))
 	{
 		depot.depotDechetsTraites(camionBrun);
+		camionBrun = depot.getCamionBrun();
 		camionBrun->ajouterDechet(dechetT);
+		UsineTraitement::Log::i("AJOUT DTC : " + to_string(dechet->getId()));
 	}
 }
 
