@@ -14,7 +14,13 @@ public:
 
 	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure: ...() =0; //à voir avec le main #specs pas claires=> non finalement^^
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteFalse : operationSuivanteFalse; }
-	virtual ~Operation() { delete operationSuivanteFalse; delete operationSuivanteTrue; Compteur::ajouterDestructeur(); }
+	virtual ~Operation() { 
+		Compteur::ajouterDestructeur(); 
+		if (operationSuivanteFalse != NULL && operationSuivanteTrue != NULL) {
+			delete operationSuivanteFalse;
+			delete operationSuivanteTrue;
+		}
+	}
 
 protected:
 	Operation() {
