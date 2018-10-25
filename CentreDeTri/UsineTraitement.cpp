@@ -48,7 +48,7 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet * dechet)
 	if (!(camionBleu->ajouterDechet(dechetT)))
 	{
 		depot.depotDechetsTraites(camionBleu);
-		camionBleu = depot.getCamionBleu;
+		camionBleu = depot.getCamionBleu();
 		camionBleu->ajouterDechet(dechetT);
 		UsineTraitement::Log::i("AJOUT DTR : " + to_string(dechet->getId()));
 	}

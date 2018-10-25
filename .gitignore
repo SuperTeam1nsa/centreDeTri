@@ -27,3 +27,8 @@ CentreDeTri.sln
 *.exe
 *.ilk
 *.pdb
+*.tlog
+*.obj
+*.idb
+*.exe
+CentreDeTri/Debug/UsineTraitement.obj
