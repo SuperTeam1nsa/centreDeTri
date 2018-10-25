@@ -10,5 +10,5 @@ public:
 		Compteur::ajouterConstructeur();
 	}
 	virtual ~Operation1() { Compteur::ajouterDestructeur(); }
-	bool effectuerOperation(Dechet* dechet)  override { return (dechet->estEnStyromousse() | dechet->estRigide()); }
+	virtual bool effectuerOperation(Dechet* dechet)  override { return (dechet->estEnStyromousse() || dechet->estRigide()); }
 };

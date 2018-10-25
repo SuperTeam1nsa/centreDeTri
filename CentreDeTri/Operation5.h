@@ -10,6 +10,6 @@ public:
 		Compteur::ajouterConstructeur();
 	}
 	virtual ~Operation5() { Compteur::ajouterDestructeur(); }
-	bool effectuerOperation(Dechet* dechet)  override { return (dechet->getCouleur() == "vert") | (dechet->getMateriel() == Dechet::VEGETAL); }
+	virtual bool effectuerOperation(Dechet* dechet)  override { return (dechet->getCouleur() == "vert") && (dechet->getMateriel() == Dechet::VEGETAL); }
 
 };
