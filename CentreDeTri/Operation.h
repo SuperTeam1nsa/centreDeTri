@@ -35,7 +35,7 @@ private:
 	//1 solution cast = peu élégante...
 	/*
 	if(dynamic_cast<Operation1*>(autre.operationSuivanteTrue))
-	operationSuivanteTrue=new Operation1(new Operation(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
+	operationSuivanteTrue=new Operation1(new Operation1(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
 	else if(dynamic_cast<Operation2*>(autre.operationSuivanteTrue))
 	operationSuivanteTrue=new Operation2(new Operation(*autre.operationSuivanteTrue), new Operation(*autre.operationSuivanteFalse));
 	//etc
