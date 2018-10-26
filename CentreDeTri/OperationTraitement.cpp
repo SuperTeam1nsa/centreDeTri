@@ -25,5 +25,5 @@ void OperationTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 }
 void OperationTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 {
-	usineTraitement->creerDechetTraiteRecyclable(dechet);
+	usineTraitement->creerDechetTraiteCompostable(dechet);
 }

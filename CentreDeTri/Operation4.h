@@ -11,6 +11,11 @@ public:
 		Compteur::ajouterConstructeur();
 	}
 	virtual ~Operation4() { Compteur::ajouterDestructeur(); }
-	bool effectuerOperation(Dechet* dechet)  override { return (dechet->getCouleur() == "brun") | (dechet->getMateriel() == Dechet::NOURRITURE); }
+	virtual bool effectuerOperation(Dechet* dechet)  override {
+		std::cout << "retour op4 : " << bool((dechet->getCouleur() == "brun") &&
+			(dechet->getMateriel() == Dechet::NOURRITURE)) << std::endl;
+		return (dechet->getCouleur() == "brun") &&
+			(dechet->getMateriel() == Dechet::NOURRITURE);
+	}
 
 };

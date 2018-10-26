@@ -10,14 +10,21 @@ ChargementDechet::~ChargementDechet() {
 		delete *it;
 	}
 	liste_dechets.resize(0);
+
 	Compteur::ajouterDestructeur();
 }
 
 Dechet* ChargementDechet::getDechet()
 {
-	Dechet* d = new Dechet(*liste_dechets.front());
-	delete liste_dechets.front();
-	liste_dechets.pop_front();
-	return d;// liste_dechets.front();//d;
+	if (liste_dechets.size() > 0)
+	{
+		Dechet* d = new Dechet(*liste_dechets.front());
+
+		delete liste_dechets.front();
+		liste_dechets.pop_front();
+		return d;// liste_dechets.front();//d;
+	}
+
+	return NULL;
 
 }
