@@ -26,6 +26,7 @@ void afficherInformation() {
 
 int main()
 {
+
 	laboratoire2();
 	afficherInformation();
 

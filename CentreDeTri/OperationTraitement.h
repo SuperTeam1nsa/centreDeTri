@@ -9,7 +9,7 @@ class OperationTraitement :
 
 public:
 	OperationTraitement(UsineTraitement* usineT);
-	//OperationTraitement(OperationTraitement const& autre);
+	OperationTraitement(OperationTraitement const& autre);
 	virtual ~OperationTraitement();
 
 	bool effectuerOperation(Dechet* dechet) override { return false; }
@@ -19,6 +19,5 @@ protected:
 	void creerDechetTraiteCompostable(Dechet* dechet);
 private:
 	UsineTraitement *usineTraitement;
-private:
-	OperationTraitement(OperationTraitement const& autre);
+
 };

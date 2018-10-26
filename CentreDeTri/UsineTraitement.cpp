@@ -50,8 +50,8 @@ void UsineTraitement::creerDechetTraiteRecyclable(Dechet * dechet)
 		depot.depotDechetsTraites(camionBleu);
 		camionBleu = depot.getCamionBleu();
 		camionBleu->ajouterDechet(dechetT);
+		UsineTraitement::Log::i("AJOUT DTR : " + to_string(dechet->getId()));
 	}
-	Log::i("AJOUT DTR : " + to_string(dechet->getId()));
 }
 
 void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
@@ -63,8 +63,8 @@ void UsineTraitement::creerDechetTraiteNonRecyclable(Dechet* dechet)
 		camionVert = depot.getCamionVert();
 		camionVert->ajouterDechet(dechetT);
 
+		UsineTraitement::Log::i("AJOUT DTNR : " + to_string(dechet->getId()));
 	}
-	Log::i("AJOUT DTNR : " + to_string(dechet->getId()));
 }
 
 void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
@@ -75,8 +75,8 @@ void UsineTraitement::creerDechetTraiteCompostable(Dechet* dechet)
 		depot.depotDechetsTraites(camionBrun);
 		camionBrun = depot.getCamionBrun();
 		camionBrun->ajouterDechet(dechetT);
+		UsineTraitement::Log::i("AJOUT DTC : " + to_string(dechet->getId()));
 	}
-	Log::i("AJOUT DTC : " + to_string(dechet->getId()));
 }
 
 void UsineTraitement::traiterDechet(Dechet * dechet)
