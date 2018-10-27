@@ -9,6 +9,8 @@ public:
 	Operation1(Operation* operationSuivanteTrue, Operation* operationSuivanteFalse) :Operation(operationSuivanteTrue, operationSuivanteFalse) {
 		Compteur::ajouterConstructeur();
 	}
-	virtual ~Operation1() { Compteur::ajouterDestructeur(); }
+	~Operation1() { printf("Delete 1 \n "); Compteur::ajouterDestructeur(); }
+	Operation1(Operation1 const& autre) :Operation(autre) { Compteur::ajouterConstructeurCopie(); }
+	Operation1* makeObject(Operation1 const& autre) { return new Operation1(autre); }
 	bool effectuerOperation(Dechet* dechet)  override { return (dechet->estEnStyromousse() || dechet->estRigide()); }
 };

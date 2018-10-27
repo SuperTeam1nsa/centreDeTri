@@ -8,5 +8,7 @@ class CreationDechetTraiteRecyclable :
 public:
 	CreationDechetTraiteRecyclable(UsineTraitement* usineTraitement) : OperationTraitement(usineTraitement) { Compteur::ajouterConstructeur(); };
 	bool effectuerOperation(Dechet* dechet) override { creerDechetTraiteRecyclable(dechet); return true; }
-	virtual ~CreationDechetTraiteRecyclable() { Compteur::ajouterDestructeur(); };
+	~CreationDechetTraiteRecyclable() { Compteur::ajouterDestructeur(); };
+	CreationDechetTraiteRecyclable(CreationDechetTraiteRecyclable const& autre) :OperationTraitement(autre) { Compteur::ajouterConstructeurCopie(); }
+	CreationDechetTraiteRecyclable* makeObject(CreationDechetTraiteRecyclable const& autre) { return new CreationDechetTraiteRecyclable(autre); }
 };

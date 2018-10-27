@@ -34,13 +34,14 @@ SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitemen
 	SequenceOperations* seq = new SequenceOperations();
 	//double chainage création ?=non cf schéma
 	//Operation *op = new Operation1(new Operation1(new Operation2(new Operation3(new Operation4(new Operation5(NULL, NULL), NULL), NULL), NULL), NULL), NULL);
-	Operation *op = new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement),
+	/*Operation *op = new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement),
 		new Operation2(new Operation6(new CreationDechetTraiteRecyclable(usineTraitement),
 			new CreationDechetTraiteNonRecyclable(usineTraitement)),
 			new Operation3(new CreationDechetTraiteRecyclable(usineTraitement),
 				new Operation4(new CreationDechetTraiteCompostable(usineTraitement),
 					new Operation5(new CreationDechetTraiteCompostable(usineTraitement),
-						new CreationDechetTraiteNonRecyclable(usineTraitement))))));
+						new CreationDechetTraiteNonRecyclable(usineTraitement))))));*/
+	Operation1* op = new Operation1(NULL, NULL);
 	seq->ajouterOperation(op);
 	return seq;
 }
