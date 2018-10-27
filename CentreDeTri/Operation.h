@@ -16,10 +16,10 @@ public:
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteTrue : operationSuivanteFalse; }
 	virtual ~Operation() {
 		Compteur::ajouterDestructeur();
-		if (operationSuivanteFalse != NULL && operationSuivanteTrue != NULL) {
+		if (operationSuivanteFalse != NULL)
 			delete operationSuivanteFalse;
+		if (operationSuivanteTrue != NULL)
 			delete operationSuivanteTrue;
-		}
 	}
 
 protected:

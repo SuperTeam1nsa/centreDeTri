@@ -28,13 +28,12 @@ void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
 	Dechet* dechet = chargement->getDechet();
 	while (dechet != NULL)
 	{
-		printf("here");
-		UsineTraitement::Log::i(*dechet);
+		Log::i(*dechet);
 		traiterDechet(dechet);
 		dechet = chargement->getDechet();
 	}
 	delete chargement;
-	UsineTraitement::Log::i(depot);
+	Log::i(depot);
 }
 
 void UsineTraitement::chargerOperations(SequenceOperations * seqOpe)

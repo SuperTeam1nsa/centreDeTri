@@ -13,7 +13,6 @@ Dechet::Dechet(int poids, string description, int type, string couleur, Materiel
 	this->styromousse = estEnStyromousse;
 	this->rigide = rigide;
 	this->id = idCourant;
-	printf("Cstr dechet id:%d, idCourant : %d \n", id, idCourant);
 	idCourant++;
 	Compteur::ajouterConstructeur();
 }
