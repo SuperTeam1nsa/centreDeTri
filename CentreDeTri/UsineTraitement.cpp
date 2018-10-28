@@ -17,9 +17,12 @@ UsineTraitement::UsineTraitement(UsineTraitement const& autre) : sequenceOperati
 UsineTraitement::~UsineTraitement()
 {
 	Compteur::ajouterDestructeur();
+
+	/*
+	détruits dans depotDechetsTraités
 	delete camionBleu;
 	delete camionVert;
-	delete camionBrun;
+	delete camionBrun;*/
 	delete sequenceOperations;
 }
 
@@ -32,6 +35,12 @@ void UsineTraitement::demarrerTraitement(ChargementDechet * chargement)
 		traiterDechet(dechet);
 		dechet = chargement->getDechet();
 	}
+	//on amène les déchets restants (dans les camions) au depot même si les camions ne sont pas 
+	//pleins (pour traiter tout le chargement) (facultatif)(ne change rien au fonctionnement du programme
+	//si ce n'est qu'on ne détruit pas les camions dans le destructeur de l'usine si on fait ça)
+	depot.depotDechetsTraites(camionBleu);
+	depot.depotDechetsTraites(camionVert);
+	depot.depotDechetsTraites(camionBrun);
 	delete chargement;
 	Log::i(depot);
 }

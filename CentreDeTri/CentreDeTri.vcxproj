@@ -120,8 +120,8 @@
     <ClCompile Include="Compteur.cpp" />
     <ClCompile Include="Dechet.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Operation.cpp" />
     <ClCompile Include="OperationTraitement.cpp" />
-    <ClCompile Include="SequenceOperations.cpp" />
     <ClCompile Include="UsineTraitement.cpp" />
   </ItemGroup>
   <ItemGroup>

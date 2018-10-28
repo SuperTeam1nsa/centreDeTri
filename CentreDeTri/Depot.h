@@ -20,14 +20,18 @@ public:
 	void depotDechetsTraites(CamionVert* camion) { totalIDTNonRecyclable += camion->viderCamion(); delete camion; }
 	void depotDechetsTraites(CamionBleu* camion) { totalIDTRecyclable += camion->viderCamion(); delete camion; }
 	void depotDechetsTraites(CamionBrun* camion) { totalIDTCompostable += camion->viderCamion(); delete camion; }
+
+
+	//rq: Première version : le poids total est différent du poids total des déchets créés car tous ne sont pas encore
+		//arrivés au dépôt (on envoie le camion au dépôt seulement quand il est plein, d'où une différence
+		//possible de 3* capacité camion (si identique pour les 3 camions), ici 3*10=30 (check avec les dechets 
+		//restants dans les camions =OK)
+	//Version actuelle: on envoie tout le chargement au depot (plus logique) donc le dernier trajet
+	//des camions est fait même s'ils ne sont pas totalement plein
 	std::ostream& operator <<(std::ostream& out) const {
 		return out << std::endl << "--DEPOT--" << std::endl << "totalIDTRecyclable	:" << totalIDTRecyclable
 			<< std::endl << "totalIDTNonRecyclable	:" << totalIDTNonRecyclable
 			<< std::endl << "totalIDTCompostable	:" << totalIDTCompostable;
-		//rq: le poids total est différent du poids total des déchets créés car tous ne sont pas encore
-			//arrivés au dépôt (on envoie le camion au dépôt seulement quand il est plein, d'où une différence
-			//possible de 3* capacité camion (si identique pour les 3 camions), ici 3*10=30 (check avec les dechets 
-			//restants dans les camions =OK)
 	}
 
 private:

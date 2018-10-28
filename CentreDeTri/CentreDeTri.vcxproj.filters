@@ -48,7 +48,7 @@
     <ClCompile Include="ChargementDechet.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="SequenceOperations.cpp">
+    <ClCompile Include="Operation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

@@ -8,15 +8,18 @@ public:
 
 	~SequenceOperations() {
 		Compteur::ajouterDestructeur();
-		//delete listeOperation;
 		if (operationDemarrage != NULL)
 			delete operationDemarrage;
 	}
+	//Dans le sens que liste d'operation pointe sur la dernière operation et demarrage
+	//sur la première, car le chainage est déjà fait quand on crée les operations
+	//Donc l'ajouter à la suite ne fait pas vraiment sens 
+	//(#après quoi ? L'operationSuivanteVraie? L'operationSuivanteFalse?)
 	SequenceOperations* ajouterOperation(Operation* operation) {
 		listeOperation = operation;
 		if (operationDemarrage == NULL)
 			operationDemarrage = operation;
-		//chainage de la liste chainee contenue dans operation (false=precedant, true=suivant) ds le constructeur de opération
+		//chainage des éléments contenu dans operation (suivantTrue, suivantFalse) dans le constructeur de opération
 		return this;
 	}
 	void definirOperationDemarrage(Operation* operation) { operationDemarrage = operation; }
@@ -27,6 +30,6 @@ public:
 		Compteur::ajouterConstructeurCopie();
 	}
 private:
-	Operation* listeOperation; //or operation à un ptr++ et un ptr-- => liste chaine element courant
+	Operation* listeOperation; //or operation a getOperationSuivante(bool) => chainage des éléments
 	Operation* operationDemarrage;
 };

@@ -30,10 +30,9 @@ private:
 };
 
 
-
+//on crée la séquence 0
 SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitement* usineTraitement) const
 {
-	//on crée la séquence 0
 	SequenceOperations* seq = new SequenceOperations();
 	Operation *op = new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement),
 		new Operation2(new Operation6(new CreationDechetTraiteRecyclable(usineTraitement),
