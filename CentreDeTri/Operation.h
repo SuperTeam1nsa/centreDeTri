@@ -15,9 +15,6 @@ public:
 	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure: ...() =0; //à voir avec le main #specs pas claires=> non finalement^^
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteTrue : operationSuivanteFalse; }
 	virtual ~Operation() {
-		static int cpt = 0;
-		cpt++;
-		printf("Nb: %d \n ", cpt);
 		Compteur::ajouterDestructeur();
 		if (operationSuivanteFalse != NULL)
 			delete operationSuivanteFalse;
@@ -31,6 +28,7 @@ protected:
 public:
 	virtual Operation* makeObject(Operation const& autre) { return new Operation(autre); }
 	Operation(Operation const& autre) {
+
 		if (autre.operationSuivanteFalse != NULL)
 			operationSuivanteFalse = (autre.operationSuivanteFalse)->makeObject(*autre.operationSuivanteFalse);
 		else

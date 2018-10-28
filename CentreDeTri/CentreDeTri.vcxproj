@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F4E5171F-79DD-432C-BBDC-C71D52CD1ABC}</ProjectGuid>
+    <ProjectGuid>{0DEE0966-0772-46C8-9D3D-335C9C6B181F}</ProjectGuid>
     <RootNamespace>CentreDeTri</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

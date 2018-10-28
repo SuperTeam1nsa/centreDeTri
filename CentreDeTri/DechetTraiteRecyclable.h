@@ -7,5 +7,5 @@ class DechetTraiteRecyclable :
 {
 public:
 	DechetTraiteRecyclable(Dechet* dechet) : DechetTraite(dechet) { Compteur::ajouterConstructeur(); }
-	virtual ~DechetTraiteRecyclable() { Compteur::ajouterDestructeur(); }
+	~DechetTraiteRecyclable() { Compteur::ajouterDestructeur(); }
 };

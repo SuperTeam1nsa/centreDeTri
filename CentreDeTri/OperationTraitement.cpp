@@ -10,7 +10,7 @@ OperationTraitement::OperationTraitement(OperationTraitement const& autre) : Ope
 	Compteur::ajouterConstructeurCopie();
 }
 OperationTraitement::~OperationTraitement() {
-	delete usineTraitement;
+	//delete usineTraitement; //détruit dans le main
 	Compteur::ajouterDestructeur();
 }
 
