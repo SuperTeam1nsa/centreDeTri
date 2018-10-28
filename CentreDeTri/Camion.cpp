@@ -53,7 +53,7 @@ int Camion::viderCamion()
 	while (!pile_dechets.empty())
 	{
 		poidsTot += pile_dechets.top()->getDechet()->getPoids();
-		delete pile_dechets.top()->getDechet();
+		delete pile_dechets.top();
 		pile_dechets.pop();
 	}
 	capacite = 0;

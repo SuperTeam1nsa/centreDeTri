@@ -9,7 +9,7 @@ class OperationTraitement :
 
 public:
 	OperationTraitement(UsineTraitement* usineT);
-	//OperationTraitement(OperationTraitement const& autre);
+	OperationTraitement(OperationTraitement const& autre);
 	~OperationTraitement();
 
 	bool effectuerOperation(Dechet* dechet) override { return false; }
@@ -17,7 +17,6 @@ protected:
 	void creerDechetTraiteRecyclable(Dechet* dechet);//inside via friend
 	void creerDechetTraiteNonRecyclable(Dechet* dechet);
 	void creerDechetTraiteCompostable(Dechet* dechet);
-	OperationTraitement(OperationTraitement const& autre);
 private:
 	UsineTraitement *usineTraitement;
 

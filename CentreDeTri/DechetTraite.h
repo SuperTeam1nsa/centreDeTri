@@ -17,9 +17,6 @@ public:
 		Compteur::ajouterConstructeurCopie();
 	}
 	virtual ~DechetTraite() {
-		static int cpt = 0; ///matter tous les déchets créés passent pas par là => pas tous détruits...
-		cpt++;
-		printf("Nb: %d \n ", cpt);
 		delete dechet;
 		Compteur::ajouterDestructeur();
 	}

@@ -12,7 +12,7 @@ public:
 		Compteur::ajouterConstructeur();
 	}
 
-	virtual bool effectuerOperation(Dechet* dechet) { return false; }//fonction virtuelle pure: ...() =0; //à voir avec le main #specs pas claires=> non finalement^^
+	virtual bool effectuerOperation(Dechet* dechet) { return false; }
 	Operation *getOperationSuivante(bool choix)const { return choix ? operationSuivanteTrue : operationSuivanteFalse; }
 	virtual ~Operation() {
 		Compteur::ajouterDestructeur();
@@ -65,10 +65,12 @@ public:
 	problème : perd la vraie nature de l'objet #operation1 etc
 	rq2: Certains operateurs par copie sont là uniquement pour faire appel à Compteur::ajouterConstructeurCopie()
 	rq3: c++ 11 and up : #decltype,declval, result_of = pas adaptés
-	operationSuivanteFalse = new std::remove_reference<decltype(*autre.operationSuivanteFalse)>::type(new Operation(*autre.operationSuivanteTrue),new Operation(*autre.operationSuivanteFalse));
+	operationSuivanteFalse = new std::remove_reference<decltype(*autre.operationSuivanteFalse)>::type(*autre.operationSuivanteFalse);
 	decltype(e) will return the "declared type of e", which is known at compile-time.
 It is impossible to retrieve the actual type of a derived class at run-time using decltype. If you want to "clone" depending on the run-time type of a polymorphic object, you can use virtual and override.
 
+Remarque finale: en tout état de fait, on ne se sert pas de ce constructeur par copie, c'est juste pour faire
+les choses bien et en cas de modification ultérieure du programme qu'il a été créé.
 	*/
 
 	}
