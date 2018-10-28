@@ -23,7 +23,10 @@ public:
 	};
 private:
 	SequenceOperations* genererSequence0(UsineTraitement* usineTraitement) const;
-	SequenceOperations* genererSequence1(UsineTraitement* usineTraitement) const { return NULL; }
+	SequenceOperations* genererSequence1(UsineTraitement* usineTraitement) const {
+		return (new SequenceOperations())->ajouterOperation(new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement),
+			new CreationDechetTraiteRecyclable(usineTraitement)));
+	}
 };
 
 
@@ -32,8 +35,6 @@ SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitemen
 {
 	//on crée la séquence 0
 	SequenceOperations* seq = new SequenceOperations();
-	//double chainage création ?=non cf schéma
-	//Operation *op = new Operation1(new Operation1(new Operation2(new Operation3(new Operation4(new Operation5(NULL, NULL), NULL), NULL), NULL), NULL), NULL);
 	Operation *op = new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement),
 		new Operation2(new Operation6(new CreationDechetTraiteRecyclable(usineTraitement),
 			new CreationDechetTraiteNonRecyclable(usineTraitement)),
@@ -41,7 +42,6 @@ SequenceOperations* GenerateurSequenceOperation::genererSequence0(UsineTraitemen
 				new Operation4(new CreationDechetTraiteCompostable(usineTraitement),
 					new Operation5(new CreationDechetTraiteCompostable(usineTraitement),
 						new CreationDechetTraiteNonRecyclable(usineTraitement))))));
-	//Operation1* op = new Operation1(new CreationDechetTraiteNonRecyclable(usineTraitement), NULL);
 	seq->ajouterOperation(op);
 	return seq;
 }

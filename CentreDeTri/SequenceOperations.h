@@ -14,7 +14,8 @@ public:
 	}
 	SequenceOperations* ajouterOperation(Operation* operation) {
 		listeOperation = operation;
-		operationDemarrage = operation;
+		if (operationDemarrage == NULL)
+			operationDemarrage = operation;
 		//chainage de la liste chainee contenue dans operation (false=precedant, true=suivant) ds le constructeur de opération
 		return this;
 	}
